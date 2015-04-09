@@ -1,0 +1,121 @@
+\hypertarget{namespacelib__output__processing}{\section{lib\-\_\-output\-\_\-processing Namespace Reference}
+\label{namespacelib__output__processing}\index{lib\-\_\-output\-\_\-processing@{lib\-\_\-output\-\_\-processing}}
+}
+
+
+Python scripts which create hdf5 database and process computational data.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacelib__output__processing_a9d14f327be0f18a0142e5b76ec5f4aef}{create\-\_\-output\-\_\-database}
+\begin{DoxyCompactList}\small\item\em Create an hdf5 file in which the results of the computation will be stored. \end{DoxyCompactList}\item 
+def \hyperlink{namespacelib__output__processing_a61052700da63608865a253a3a6e6a456}{create\-\_\-plots}
+\begin{DoxyCompactList}\small\item\em Plot initial data and four computations to illustrate behavior of the numerical method as the grid resolution increases. \end{DoxyCompactList}\item 
+def \hyperlink{namespacelib__output__processing_a7a26528b8944dc845d0edc4b95902830}{grid\-\_\-norm}
+\begin{DoxyCompactList}\small\item\em Grid norm of a function, represented as a vector in $ \mathbf{R}^M $ (redefined based on \href{https://github.com/numpy/numpy/blob/v1.9.1/numpy/linalg/linalg.py#L1924}{\tt linalg.\-py}) \end{DoxyCompactList}\item 
+def \hyperlink{namespacelib__output__processing_a99a6cd2aadc4ee45a7995ffab5d7ebdf}{create\-\_\-convergence\-\_\-table}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacelib__output__processing_ad1f7a4c194d8a2ab802e2d5aec50df5c}{database\-\_\-path} = \char`\"{}output\-\_\-database/computations\-\_\-output.\-hdf5\char`\"{}
+\item 
+list \hyperlink{namespacelib__output__processing_a88659a6c20fb70cd273430b1029d7e2d}{initial\-\_\-conditions}
+\item 
+list \hyperlink{namespacelib__output__processing_aa8835dfb3aa4d41cd54f9eba11f9fcee}{fluxes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Python scripts which create hdf5 database and process computational data. 
+
+\subsection{Function Documentation}
+\hypertarget{namespacelib__output__processing_a99a6cd2aadc4ee45a7995ffab5d7ebdf}{\index{lib\-\_\-output\-\_\-processing@{lib\-\_\-output\-\_\-processing}!create\-\_\-convergence\-\_\-table@{create\-\_\-convergence\-\_\-table}}
+\index{create\-\_\-convergence\-\_\-table@{create\-\_\-convergence\-\_\-table}!lib_output_processing@{lib\-\_\-output\-\_\-processing}}
+\subsubsection[{create\-\_\-convergence\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}def lib\-\_\-output\-\_\-processing.\-create\-\_\-convergence\-\_\-table (
+\begin{DoxyParamCaption}
+\item[{}]{initial\-\_\-condition, }
+\item[{}]{flux}
+\end{DoxyParamCaption}
+)}}\label{namespacelib__output__processing_a99a6cd2aadc4ee45a7995ffab5d7ebdf}
+\hypertarget{namespacelib__output__processing_a9d14f327be0f18a0142e5b76ec5f4aef}{\index{lib\-\_\-output\-\_\-processing@{lib\-\_\-output\-\_\-processing}!create\-\_\-output\-\_\-database@{create\-\_\-output\-\_\-database}}
+\index{create\-\_\-output\-\_\-database@{create\-\_\-output\-\_\-database}!lib_output_processing@{lib\-\_\-output\-\_\-processing}}
+\subsubsection[{create\-\_\-output\-\_\-database}]{\setlength{\rightskip}{0pt plus 5cm}def lib\-\_\-output\-\_\-processing.\-create\-\_\-output\-\_\-database (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacelib__output__processing_a9d14f327be0f18a0142e5b76ec5f4aef}
+
+
+Create an hdf5 file in which the results of the computation will be stored. 
+
+Creates an hdf5 file with the necessary group hierarchy to store the results of computations in an organized manner.
+
+This function should only be used once\-: once the hdf5 file is created with the appropriate group structure, the main program shall not alter that structure \hypertarget{namespacelib__output__processing_a61052700da63608865a253a3a6e6a456}{\index{lib\-\_\-output\-\_\-processing@{lib\-\_\-output\-\_\-processing}!create\-\_\-plots@{create\-\_\-plots}}
+\index{create\-\_\-plots@{create\-\_\-plots}!lib_output_processing@{lib\-\_\-output\-\_\-processing}}
+\subsubsection[{create\-\_\-plots}]{\setlength{\rightskip}{0pt plus 5cm}def lib\-\_\-output\-\_\-processing.\-create\-\_\-plots (
+\begin{DoxyParamCaption}
+\item[{}]{initial\-\_\-condition, }
+\item[{}]{flux}
+\end{DoxyParamCaption}
+)}}\label{namespacelib__output__processing_a61052700da63608865a253a3a6e6a456}
+
+
+Plot initial data and four computations to illustrate behavior of the numerical method as the grid resolution increases. 
+
+\hypertarget{namespacelib__output__processing_a7a26528b8944dc845d0edc4b95902830}{\index{lib\-\_\-output\-\_\-processing@{lib\-\_\-output\-\_\-processing}!grid\-\_\-norm@{grid\-\_\-norm}}
+\index{grid\-\_\-norm@{grid\-\_\-norm}!lib_output_processing@{lib\-\_\-output\-\_\-processing}}
+\subsubsection[{grid\-\_\-norm}]{\setlength{\rightskip}{0pt plus 5cm}def lib\-\_\-output\-\_\-processing.\-grid\-\_\-norm (
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{ord}
+\end{DoxyParamCaption}
+)}}\label{namespacelib__output__processing_a7a26528b8944dc845d0edc4b95902830}
+
+
+Grid norm of a function, represented as a vector in $ \mathbf{R}^M $ (redefined based on \href{https://github.com/numpy/numpy/blob/v1.9.1/numpy/linalg/linalg.py#L1924}{\tt linalg.\-py}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input array\\
+\hline
+{\em ord} & Order of the norm, which can be \{1, 2, numpy.\-inf\}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Norm of the vector 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacelib__output__processing_ad1f7a4c194d8a2ab802e2d5aec50df5c}{\index{lib\-\_\-output\-\_\-processing@{lib\-\_\-output\-\_\-processing}!database\-\_\-path@{database\-\_\-path}}
+\index{database\-\_\-path@{database\-\_\-path}!lib_output_processing@{lib\-\_\-output\-\_\-processing}}
+\subsubsection[{database\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}string lib\-\_\-output\-\_\-processing.\-database\-\_\-path = \char`\"{}output\-\_\-database/computations\-\_\-output.\-hdf5\char`\"{}}}\label{namespacelib__output__processing_ad1f7a4c194d8a2ab802e2d5aec50df5c}
+\hypertarget{namespacelib__output__processing_aa8835dfb3aa4d41cd54f9eba11f9fcee}{\index{lib\-\_\-output\-\_\-processing@{lib\-\_\-output\-\_\-processing}!fluxes@{fluxes}}
+\index{fluxes@{fluxes}!lib_output_processing@{lib\-\_\-output\-\_\-processing}}
+\subsubsection[{fluxes}]{\setlength{\rightskip}{0pt plus 5cm}list lib\-\_\-output\-\_\-processing.\-fluxes}}\label{namespacelib__output__processing_aa8835dfb3aa4d41cd54f9eba11f9fcee}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = [
+2  \textcolor{stringliteral}{"Upwind"}, 
+3  \textcolor{stringliteral}{"Lax-Friedrichs"}, 
+4  \textcolor{stringliteral}{"Lax-Wendroff"}, 
+5  \textcolor{stringliteral}{"Fromm"}, 
+6  \textcolor{stringliteral}{"Fromm - van Leer"}, 
+7  \textcolor{stringliteral}{"Flux-Corrected Transport"}, 
+8  \textcolor{stringliteral}{"Lax Wendroff Fourth Order"}    
+9   ]
+\end{DoxyCode}
+\hypertarget{namespacelib__output__processing_a88659a6c20fb70cd273430b1029d7e2d}{\index{lib\-\_\-output\-\_\-processing@{lib\-\_\-output\-\_\-processing}!initial\-\_\-conditions@{initial\-\_\-conditions}}
+\index{initial\-\_\-conditions@{initial\-\_\-conditions}!lib_output_processing@{lib\-\_\-output\-\_\-processing}}
+\subsubsection[{initial\-\_\-conditions}]{\setlength{\rightskip}{0pt plus 5cm}list lib\-\_\-output\-\_\-processing.\-initial\-\_\-conditions}}\label{namespacelib__output__processing_a88659a6c20fb70cd273430b1029d7e2d}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = [
+2  \textcolor{stringliteral}{"Square Wave"}, 
+3  \textcolor{stringliteral}{"Semicircle"}, 
+4  \textcolor{stringliteral}{"Gaussian Pulse"}
+5   ]
+\end{DoxyCode}

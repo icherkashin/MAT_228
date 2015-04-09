@@ -1,0 +1,181 @@
+\hypertarget{classFinite__Grid}{\section{Finite\-\_\-\-Grid Class Reference}
+\label{classFinite__Grid}\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}}
+}
+
+
+{\ttfamily \#include $<$Finite\-\_\-\-Grid.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classFinite__Grid_aaa50925d3700478faea3e457e817822e}{initialize\-\_\-\-Grid} (int m, double A, double s, double t)
+\item 
+double \& \hyperlink{classFinite__Grid_a9c1d32863310a92669c59cd7e943f93c}{operator()} (int i)
+\item 
+\hyperlink{classFinite__Grid}{Finite\-\_\-\-Grid} \& \hyperlink{classFinite__Grid_a8cd3ad54b7bad81251c53b6bfeeb5e59}{operator=} (const \hyperlink{classFinite__Grid}{Finite\-\_\-\-Grid} \&original)
+\begin{DoxyCompactList}\small\item\em Copy a grid. Description. \end{DoxyCompactList}\item 
+void \hyperlink{classFinite__Grid_af682ebd228fc0e5b4f22f550925c37f1}{initial\-\_\-\-Data} (double($\ast$initial\-\_\-data)(double))
+\item 
+double $\ast$ \hyperlink{classFinite__Grid_a0a9fdd900f6367f1b24e1b706d91e8ea}{get\-\_\-solution\-\_\-data} ()
+\item 
+double $\ast$ \hyperlink{classFinite__Grid_ab508463cffaa3df669f5f3438434f5f2}{get\-\_\-local\-\_\-solution\-\_\-data} ()
+\item 
+double $\ast$ \hyperlink{classFinite__Grid_a0d78457b64e774bcec965b6f8e07ba19}{get\-\_\-initial\-\_\-data} ()
+\item 
+int \hyperlink{classFinite__Grid_a1fe5926edc3e29a32a06f311703147ff}{get\-\_\-\-M} () const 
+\item 
+int \hyperlink{classFinite__Grid_aa5da5f79ab983bf1ee6e0affb1f9b3a6}{get\-\_\-local\-\_\-\-M} () const 
+\item 
+int \hyperlink{classFinite__Grid_a17048cc7253f7d0349b0b6092b6d516e}{get\-\_\-\-N} () const 
+\item 
+double \hyperlink{classFinite__Grid_a22186597e53e379de7250b8f1a573d7b}{get\-\_\-\-C\-F\-L} () const 
+\item 
+double \hyperlink{classFinite__Grid_aa7592683c6e4209bf963b3d86592ea70}{get\-\_\-a} () const 
+\item 
+double \hyperlink{classFinite__Grid_a3480e3cdfcc4b6aa6e0fd92140f2a830}{get\-\_\-\-T} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classFinite__Grid_a6161d1e41e0002d1ddc253d7252dd739}{computation} (double($\ast$initial\-\_\-data)(double), double($\ast$method)(int, \hyperlink{classFinite__Grid}{Finite\-\_\-\-Grid} \&), \hyperlink{classFinite__Grid}{Finite\-\_\-\-Grid} \&u)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classFinite__Grid_a08a42cb21b0c78b53ee9585f35d94fa5}{accessed\-\_\-last}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFinite__Grid_a6161d1e41e0002d1ddc253d7252dd739}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!computation@{computation}}
+\index{computation@{computation}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{computation}]{\setlength{\rightskip}{0pt plus 5cm}void Finite\-\_\-\-Grid\-::computation (
+\begin{DoxyParamCaption}
+\item[{double($\ast$)(double)}]{initial\-\_\-data, }
+\item[{double($\ast$)(int, {\bf Finite\-\_\-\-Grid} \&)}]{method, }
+\item[{{\bf Finite\-\_\-\-Grid} \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classFinite__Grid_a6161d1e41e0002d1ddc253d7252dd739}
+\hypertarget{classFinite__Grid_aa7592683c6e4209bf963b3d86592ea70}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!get\-\_\-a@{get\-\_\-a}}
+\index{get\-\_\-a@{get\-\_\-a}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{get\-\_\-a}]{\setlength{\rightskip}{0pt plus 5cm}double Finite\-\_\-\-Grid\-::get\-\_\-a (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classFinite__Grid_aa7592683c6e4209bf963b3d86592ea70}
+\hypertarget{classFinite__Grid_a22186597e53e379de7250b8f1a573d7b}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!get\-\_\-\-C\-F\-L@{get\-\_\-\-C\-F\-L}}
+\index{get\-\_\-\-C\-F\-L@{get\-\_\-\-C\-F\-L}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{get\-\_\-\-C\-F\-L}]{\setlength{\rightskip}{0pt plus 5cm}double Finite\-\_\-\-Grid\-::get\-\_\-\-C\-F\-L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classFinite__Grid_a22186597e53e379de7250b8f1a573d7b}
+\hypertarget{classFinite__Grid_a0d78457b64e774bcec965b6f8e07ba19}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!get\-\_\-initial\-\_\-data@{get\-\_\-initial\-\_\-data}}
+\index{get\-\_\-initial\-\_\-data@{get\-\_\-initial\-\_\-data}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{get\-\_\-initial\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ Finite\-\_\-\-Grid\-::get\-\_\-initial\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classFinite__Grid_a0d78457b64e774bcec965b6f8e07ba19}
+\hypertarget{classFinite__Grid_aa5da5f79ab983bf1ee6e0affb1f9b3a6}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!get\-\_\-local\-\_\-\-M@{get\-\_\-local\-\_\-\-M}}
+\index{get\-\_\-local\-\_\-\-M@{get\-\_\-local\-\_\-\-M}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{get\-\_\-local\-\_\-\-M}]{\setlength{\rightskip}{0pt plus 5cm}int Finite\-\_\-\-Grid\-::get\-\_\-local\-\_\-\-M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classFinite__Grid_aa5da5f79ab983bf1ee6e0affb1f9b3a6}
+\hypertarget{classFinite__Grid_ab508463cffaa3df669f5f3438434f5f2}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!get\-\_\-local\-\_\-solution\-\_\-data@{get\-\_\-local\-\_\-solution\-\_\-data}}
+\index{get\-\_\-local\-\_\-solution\-\_\-data@{get\-\_\-local\-\_\-solution\-\_\-data}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{get\-\_\-local\-\_\-solution\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ Finite\-\_\-\-Grid\-::get\-\_\-local\-\_\-solution\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classFinite__Grid_ab508463cffaa3df669f5f3438434f5f2}
+\hypertarget{classFinite__Grid_a1fe5926edc3e29a32a06f311703147ff}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!get\-\_\-\-M@{get\-\_\-\-M}}
+\index{get\-\_\-\-M@{get\-\_\-\-M}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{get\-\_\-\-M}]{\setlength{\rightskip}{0pt plus 5cm}int Finite\-\_\-\-Grid\-::get\-\_\-\-M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classFinite__Grid_a1fe5926edc3e29a32a06f311703147ff}
+\hypertarget{classFinite__Grid_a17048cc7253f7d0349b0b6092b6d516e}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!get\-\_\-\-N@{get\-\_\-\-N}}
+\index{get\-\_\-\-N@{get\-\_\-\-N}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{get\-\_\-\-N}]{\setlength{\rightskip}{0pt plus 5cm}int Finite\-\_\-\-Grid\-::get\-\_\-\-N (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classFinite__Grid_a17048cc7253f7d0349b0b6092b6d516e}
+\hypertarget{classFinite__Grid_a0a9fdd900f6367f1b24e1b706d91e8ea}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!get\-\_\-solution\-\_\-data@{get\-\_\-solution\-\_\-data}}
+\index{get\-\_\-solution\-\_\-data@{get\-\_\-solution\-\_\-data}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{get\-\_\-solution\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ Finite\-\_\-\-Grid\-::get\-\_\-solution\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classFinite__Grid_a0a9fdd900f6367f1b24e1b706d91e8ea}
+\hypertarget{classFinite__Grid_a3480e3cdfcc4b6aa6e0fd92140f2a830}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!get\-\_\-\-T@{get\-\_\-\-T}}
+\index{get\-\_\-\-T@{get\-\_\-\-T}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{get\-\_\-\-T}]{\setlength{\rightskip}{0pt plus 5cm}double Finite\-\_\-\-Grid\-::get\-\_\-\-T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classFinite__Grid_a3480e3cdfcc4b6aa6e0fd92140f2a830}
+get T \hypertarget{classFinite__Grid_af682ebd228fc0e5b4f22f550925c37f1}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!initial\-\_\-\-Data@{initial\-\_\-\-Data}}
+\index{initial\-\_\-\-Data@{initial\-\_\-\-Data}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{initial\-\_\-\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Finite\-\_\-\-Grid\-::initial\-\_\-\-Data (
+\begin{DoxyParamCaption}
+\item[{double($\ast$)(double)}]{initial\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{classFinite__Grid_af682ebd228fc0e5b4f22f550925c37f1}
+\hypertarget{classFinite__Grid_aaa50925d3700478faea3e457e817822e}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!initialize\-\_\-\-Grid@{initialize\-\_\-\-Grid}}
+\index{initialize\-\_\-\-Grid@{initialize\-\_\-\-Grid}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{initialize\-\_\-\-Grid}]{\setlength{\rightskip}{0pt plus 5cm}void Finite\-\_\-\-Grid\-::initialize\-\_\-\-Grid (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{double}]{A, }
+\item[{double}]{s, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)}}\label{classFinite__Grid_aaa50925d3700478faea3e457e817822e}
+\hypertarget{classFinite__Grid_a9c1d32863310a92669c59cd7e943f93c}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!operator()@{operator()}}
+\index{operator()@{operator()}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}double \& Finite\-\_\-\-Grid\-::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classFinite__Grid_a9c1d32863310a92669c59cd7e943f93c}
+\hypertarget{classFinite__Grid_a8cd3ad54b7bad81251c53b6bfeeb5e59}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!operator=@{operator=}}
+\index{operator=@{operator=}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Finite\-\_\-\-Grid} \& Finite\-\_\-\-Grid\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Finite\-\_\-\-Grid} \&}]{original}
+\end{DoxyParamCaption}
+)}}\label{classFinite__Grid_a8cd3ad54b7bad81251c53b6bfeeb5e59}
+
+
+Copy a grid. Description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & grid to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the new copy. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classFinite__Grid_a08a42cb21b0c78b53ee9585f35d94fa5}{\index{Finite\-\_\-\-Grid@{Finite\-\_\-\-Grid}!accessed\-\_\-last@{accessed\-\_\-last}}
+\index{accessed\-\_\-last@{accessed\-\_\-last}!Finite_Grid@{Finite\-\_\-\-Grid}}
+\subsubsection[{accessed\-\_\-last}]{\setlength{\rightskip}{0pt plus 5cm}bool Finite\-\_\-\-Grid\-::accessed\-\_\-last}}\label{classFinite__Grid_a08a42cb21b0c78b53ee9585f35d94fa5}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classFinite__Grid_af682ebd228fc0e5b4f22f550925c37f1}{initial\-\_\-\-Data} 
+
+\hyperlink{classFinite__Grid_aa7592683c6e4209bf963b3d86592ea70}{get\-\_\-a} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Finite__Grid_8hpp}{Finite\-\_\-\-Grid.\-hpp}\item 
+source/\hyperlink{Finite__Grid_8cpp}{Finite\-\_\-\-Grid.\-cpp}\end{DoxyCompactItemize}
