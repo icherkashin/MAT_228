@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['gaussian_5fpulse',['Gaussian_Pulse',['../classMethod.html#a5de1d4fb03ee2a6a4d34baf57ef22e1c',1,'Method']]],
-  ['get_5fa',['get_a',['../classFinite__Grid.html#aa7592683c6e4209bf963b3d86592ea70',1,'Finite_Grid']]],
-  ['get_5fcfl',['get_CFL',['../classFinite__Grid.html#a22186597e53e379de7250b8f1a573d7b',1,'Finite_Grid']]],
-  ['get_5finitial_5fdata',['get_initial_data',['../classFinite__Grid.html#a0d78457b64e774bcec965b6f8e07ba19',1,'Finite_Grid']]],
-  ['get_5flocal_5fm',['get_local_M',['../classFinite__Grid.html#aa5da5f79ab983bf1ee6e0affb1f9b3a6',1,'Finite_Grid']]],
-  ['get_5flocal_5fsolution_5fdata',['get_local_solution_data',['../classFinite__Grid.html#ab508463cffaa3df669f5f3438434f5f2',1,'Finite_Grid']]],
-  ['get_5fm',['get_M',['../classFinite__Grid.html#a1fe5926edc3e29a32a06f311703147ff',1,'Finite_Grid']]],
-  ['get_5fn',['get_N',['../classFinite__Grid.html#a17048cc7253f7d0349b0b6092b6d516e',1,'Finite_Grid']]],
-  ['get_5fsolution_5fdata',['get_solution_data',['../classFinite__Grid.html#a0a9fdd900f6367f1b24e1b706d91e8ea',1,'Finite_Grid']]],
-  ['get_5ft',['get_T',['../classFinite__Grid.html#a3480e3cdfcc4b6aa6e0fd92140f2a830',1,'Finite_Grid']]],
-  ['grid_5fnorm',['grid_norm',['../namespacelib__output__processing.html#a7a26528b8944dc845d0edc4b95902830',1,'lib_output_processing']]]
+  ['include_5fcontent',['include_content',['../namespacelib__output__processing.html#a77dfed956b42cdbe5fc4339c13f87adf',1,'lib_output_processing']]],
+  ['initial_5fcondition',['initial_condition',['../structMethod_1_1initial__condition.html',1,'Method']]],
+  ['initial_5fcondition_5fbase',['Initial_Condition_base',['../classInitial__Condition__base.html',1,'']]],
+  ['initial_5fcondition_5ffunction',['initial_condition_function',['../classMethod.html#aa5f32411bc120712a9b4e780f593ccf0',1,'Method']]],
+  ['initial_5fconditions',['initial_conditions',['../classMethod.html#aac08bb2a7106de6043c82fdd5511626a',1,'Method::initial_conditions()'],['../namespacelib__output__processing.html#a88659a6c20fb70cd273430b1029d7e2d',1,'lib_output_processing.initial_conditions()'],['../main_8cpp.html#a918ec2052d836564a91f3e3c3532f206',1,'initial_conditions():&#160;main.cpp']]],
+  ['initial_5fdata',['initial_Data',['../classFinite__Grid.html#af682ebd228fc0e5b4f22f550925c37f1',1,'Finite_Grid']]],
+  ['initialize_5fgrid',['initialize_Grid',['../classFinite__Grid.html#aaa50925d3700478faea3e457e817822e',1,'Finite_Grid']]]
 ];

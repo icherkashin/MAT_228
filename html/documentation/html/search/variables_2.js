@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['database_5fpath',['database_path',['../namespacelib__output__processing.html#ad1f7a4c194d8a2ab802e2d5aec50df5c',1,'lib_output_processing']]]
+  ['finite_5fgrid',['Finite_Grid',['../classMethod.html#af5aaa9012b46115a1764f28162f75194',1,'Method']]],
+  ['fluxes',['fluxes',['../namespacelib__output__processing.html#aa8835dfb3aa4d41cd54f9eba11f9fcee',1,'lib_output_processing.fluxes()'],['../main_8cpp.html#a841bc81c372419816fea267b02f3048d',1,'fluxes():&#160;main.cpp']]],
+  ['function',['function',['../structMethod_1_1method.html#a85fb6ad626719576ddca675b6d47db49',1,'Method::method::function()'],['../structMethod_1_1initial__condition.html#ab1a391d4d32f7af358f4cf44f4eee55d',1,'Method::initial_condition::function()']]]
 ];

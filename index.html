@@ -15,8 +15,8 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>     
 <script> 
- function include_content(content_path) {
-  $("#includeContent").load(content_path);
+ function include_content(content_id) {
+  $("#" + content_id).load("html/computations/" + content_id + ".html");
   };
 </script> 
   
@@ -24,14 +24,7 @@
 
 <body>
 
-<div id="wrap">
-
-  <div id="header">
-  <h1>MAT 228A: Numerical Solution of Partial Differential Equations</h1>
-  </div>
-
-    <div id="navigation">   
-      <h3>Theory Homework, Computations and Program Documentation</h3>     
+<div id="navigation">      
     <ul>
      
       <li><a class="menuNode">Theory Homework</a>
@@ -80,27 +73,29 @@
                
       <li>
       <a href="html/documentation/html/index.html">
-	Program Documentation
+	Documentation
       </a>
       </li>
       
     </ul>    
         <script type="text/javascript" src="javascript/navigation.js"></script>
-  </div>
-  
-  <div id="content">
-
-<div id="includeContent">
-<script>
-include_content("html/computations/Square_Wave_Upwind.html")
-</script>
 </div>
 
+<div id="wrap">
+
+  <div id="header">
+  <h1>MAT 228A: Numerical Solution of Partial Differential Equations</h1>
   </div>
+  
+<div id="include_content">
+    <script>include_content("include_content")</script>
+</div>
+
+</div>
 
   <div style="clear: both;"> </div>
 
-  </div>
+</div>
 
 <div id="footer">
   <p>Design based on <a href="http://www.opendesigns.org/design/grey-fluid/">Grey Fluid</a> template from 

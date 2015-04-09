@@ -7,6 +7,7 @@ body {
 }
 
 table {
+  margin-top: 10px;
   margin-left:auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -51,6 +52,10 @@ a {
     text-decoration: none;
 }
 
+a:focus { 
+  outline: none;
+}
+
 figure img.center {
     border: 1px solid #336699;
     display: block;
@@ -65,7 +70,7 @@ figure figcaption {
 }
 
 h1 {
-    text-align: center;
+    text-align: center;   
     margin: 0;
     padding: 20px 0 0 10px;
     font-weight: 100;
@@ -75,11 +80,12 @@ h1 {
 
 #wrap { 
     width: 98%;
-    margin: 0 auto;
+    margin: 5px auto;
 }
 
 #header {
     height: 80px;
+    margin-left: 300px;
     background: #eee;
     border: 2px solid #b0b0b0; 
 }

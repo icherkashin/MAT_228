@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['output',['Output',['../classOutput.html',1,'']]],
-  ['output_5fdata',['output_data',['../structOutput_1_1output__data.html',1,'Output']]]
+  ['method',['method',['../structMethod_1_1method.html',1,'Method']]],
+  ['method',['Method',['../classMethod.html',1,'']]]
 ];

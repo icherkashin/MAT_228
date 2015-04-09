@@ -1,13 +1,16 @@
 #navigation {
       position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
       position: sticky;
-      top: 15px;
+      top: 5px;
       float: left;
       width: 19%;
       background: #eee;
       padding: 0 15px;
       border: 2px solid #b0b0b0;
-      margin-top: 10px;
+      margin-left: 14px;
   }
   
 #navigation h3 { 
@@ -29,7 +32,6 @@
     visibility: hidden;
     z-index: 1;
 }
-
 
 #navigation > ul > li > a  {
     font-weight:bold;
