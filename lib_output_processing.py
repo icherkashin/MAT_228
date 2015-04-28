@@ -37,7 +37,7 @@ from lxml import etree
 database_path = "output_database/computations_output.hdf5"
 
 ## Path to the website directory where the generated HTML documents will be written
-html_path = "MAT_228_website/"
+html_path = "website/"
 
 
 ## Valid initial condition input strings 
