@@ -1,0 +1,7 @@
+<p>
+Upwind method demonstrates highly diffusive behavior: the regions where the initial data has a steep gradient are smoothened out by the numerical solution. This implies that Upwind method is not appropriate when initial data has steep gradients. Such behavior is explained by the fact that the modified equation for Upwind method is the advection-diffusion equation, i.e. Upwind approximates diffusive advection rather that advection without dissipation. Since diffusion smoothens out any sharp gradients or discontinuities that are initially present, so does Upwind. 
+</p>
+
+<p>
+The convergence table indicates that uniform convergence is of the smallest order: that is natural, because very high precision is required to approximate a function with steep gradient by a continuous function uniformly. The rates of convergence for all norms are less than one, because the truncation error analysis relied on an assumption that the initial data is at least twice continuously differentiable, which does not take place in this case.
+</p>

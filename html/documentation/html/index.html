@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,26 +78,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MAT 228A Computing Homework </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Description of the project; how to install and run.</p>
-<p>Computation: C++</p>
-<p>Output data storage: hdf5</p>
-<p>Processing: Python + h5py + matplotlib</p>
+<div class="textblock"><dl class="section user"><dt>Description</dt><dd></dd></dl>
+<p>Implementation of the conservative finite difference methods for MAT 228A computing homework.</p>
+<dl class="section user"><dt>Computation</dt><dd>C++</dd></dl>
+<dl class="section user"><dt>Data storage</dt><dd>hdf5</dd></dl>
+<dl class="section user"><dt>Data processing</dt><dd>Python + h5py + matplotlib</dd></dl>
+<dl class="section user"><dt>Installation</dt><dd></dd></dl>
+<ol>
+<li>
+Install libhdf5-dev, python-h5py and python-matplotlib (e.g. using "apt-get install")  </li>
+<li>
+Adjust the parameters in the CMakeLists.txt file according to your installation directory and location of hdf5 library  </li>
+<li>
+Run "make" command, which should compile the "compute_task" executable  </li>
+</ol>
 <dl class="section user"><dt>Usage</dt><dd></dd></dl>
-<p>./run_computation "Initial Condition" "Method" "Refinement Exponent" "CFL Number"</p>
+<p>The syntax for executing a particular computational task is:</p>
+<ul>
+<li>
+./compute_task "Initial Condition" "Flux" "Refinement Exponent"</li>
+</ul>
+<p>The sequence of tasks is programed in the file "execute_tasks.py" using python syntax and functions defined in the file "lib_output_processing.py."</p>
+<p>An example script can be found in the file "execute_task.py" which performs computations for all initial conditions and fluxes and processes all data.</p>
+<p>Based on this example, the user can define behavior that suits his particular needs.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Initial_Condition</td><td>Name of the initial condition</td></tr>
-    <tr><td class="paramname"><a class="el" href="classMethod.html">Method</a></td><td>Name of the flux approximation</td></tr>
-    <tr><td class="paramname">Refinement_Exponent</td><td>Grid refinement is h = 2^(Refinement_Exponent)</td></tr>
+    <tr><td class="paramname">Initial_Condition</td><td>Valid initial condition input string </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>Analysis of the computational results:</dt><dd>TODO: change to index.html for GitHub Pages <a href="/home/ivan/Desktop/228A/Homework/228a_html/index.html">Theory and Computing Homework</a></dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="Compute__task_8hpp.html#a918ec2052d836564a91f3e3c3532f206" title="Valid initial condition input strings. ">initial_conditions</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Flux</td><td>Valid flux input string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="Compute__task_8hpp.html#a841bc81c372419816fea267b02f3048d" title="Valid fluxes input strings. ">fluxes</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Refinement_Exponent</td><td>Valid grid stepsize; refinement exponent is related to grid stepsize as h = 2^(-Refinement_Exponent)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Analysis of the computational results:</dt><dd></dd></dl>
+<p><a href="/home/ivan/Desktop/228A/Homework/Programs/FINAL_VERSION/MAT_228_website/index.html">Theory and Computing Homework</a></p>
 <dl class="section user"><dt>Author: </dt><dd><a href="https://github.com/icherkashin">Ivan Cherkashin</a> </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 9 2015 14:27:51 for 228A Computing Homework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 27 2015 16:43:08 for 228A Computing Homework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

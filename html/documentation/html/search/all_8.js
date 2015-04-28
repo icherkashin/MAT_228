@@ -1,14 +1,6 @@
 var searchData=
 [
-  ['mat_20228a_20computing_20homework',['MAT 228A Computing Homework',['../index.html',1,'']]],
-  ['main',['main',['../namespacemain.html',1,'main'],['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
-  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['main_2epy',['main.py',['../main_8py.html',1,'']]],
-  ['main_5floop',['main_loop',['../main_8cpp.html#a3084053b79b9697506158f31688ba9ef',1,'main.cpp']]],
-  ['method',['Method',['../classMethod.html',1,'']]],
-  ['method',['method',['../structMethod_1_1method.html',1,'Method']]],
-  ['method_2ecpp',['Method.cpp',['../Method_8cpp.html',1,'']]],
-  ['method_2ehpp',['Method.hpp',['../Method_8hpp.html',1,'']]],
-  ['method_5ffunction',['method_function',['../classMethod.html#a3aa0940bc4e4fdc07d065851cc8f7800',1,'Method']]],
-  ['methods',['methods',['../classMethod.html#af977667f5061f219d7ea8ad1262a6e71',1,'Method']]]
+  ['include_5fcontent_5fhtml',['include_content_html',['../namespacelib__output__processing.html#a62558b5e568d5705309a0792da76b4f5',1,'lib_output_processing']]],
+  ['initial_5fconditions',['initial_conditions',['../namespacelib__output__processing.html#a88659a6c20fb70cd273430b1029d7e2d',1,'lib_output_processing.initial_conditions()'],['../Compute__task_8hpp.html#a918ec2052d836564a91f3e3c3532f206',1,'initial_conditions():&#160;Compute_task.hpp']]],
+  ['initial_5fdata',['initial_data',['../namespacelib__output__processing.html#ab4d9a51bfc63dd7cf7e94e3f697c0442',1,'lib_output_processing']]]
 ];

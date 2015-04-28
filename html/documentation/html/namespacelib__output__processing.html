@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -70,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,38 +88,198 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Python scripts which create hdf5 database and process computational data.  
+<p>Python scripts devoted to processing the computational results, such as:  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab4d9a51bfc63dd7cf7e94e3f697c0442"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#ab4d9a51bfc63dd7cf7e94e3f697c0442">initial_data</a></td></tr>
+<tr class="memdesc:ab4d9a51bfc63dd7cf7e94e3f697c0442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the initial data based on the desired initial condition.  <a href="#ab4d9a51bfc63dd7cf7e94e3f697c0442">More...</a><br/></td></tr>
+<tr class="separator:ab4d9a51bfc63dd7cf7e94e3f697c0442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d14f327be0f18a0142e5b76ec5f4aef"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#a9d14f327be0f18a0142e5b76ec5f4aef">create_output_database</a></td></tr>
 <tr class="memdesc:a9d14f327be0f18a0142e5b76ec5f4aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an hdf5 file in which the results of the computation will be stored.  <a href="#a9d14f327be0f18a0142e5b76ec5f4aef">More...</a><br/></td></tr>
 <tr class="separator:a9d14f327be0f18a0142e5b76ec5f4aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61052700da63608865a253a3a6e6a456"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#a61052700da63608865a253a3a6e6a456">create_plots</a></td></tr>
-<tr class="memdesc:a61052700da63608865a253a3a6e6a456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot initial data and four computations to illustrate behavior of the numerical method as the grid resolution increases.  <a href="#a61052700da63608865a253a3a6e6a456">More...</a><br/></td></tr>
+<tr class="memdesc:a61052700da63608865a253a3a6e6a456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot initial data and four selected computations to illustrate behavior of the numerical method as the grid resolution increases.  <a href="#a61052700da63608865a253a3a6e6a456">More...</a><br/></td></tr>
 <tr class="separator:a61052700da63608865a253a3a6e6a456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a26528b8944dc845d0edc4b95902830"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#a7a26528b8944dc845d0edc4b95902830">grid_norm</a></td></tr>
-<tr class="memdesc:a7a26528b8944dc845d0edc4b95902830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grid norm of a function, represented as a vector in <img class="formulaInl" alt="$ \mathbf{R}^M $" src="form_1.png"/> (redefined based on <a href="https://github.com/numpy/numpy/blob/v1.9.1/numpy/linalg/linalg.py#L1924">linalg.py</a>)  <a href="#a7a26528b8944dc845d0edc4b95902830">More...</a><br/></td></tr>
+<tr class="memdesc:a7a26528b8944dc845d0edc4b95902830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grid norm of a function, represented as a vector in <img class="formulaInl" alt="$ \mathbf{R}^M $" src="form_0.png"/> (redefined based on <a href="https://github.com/numpy/numpy/blob/v1.9.1/numpy/linalg/linalg.py#L1924">linalg.py</a>)  <a href="#a7a26528b8944dc845d0edc4b95902830">More...</a><br/></td></tr>
 <tr class="separator:a7a26528b8944dc845d0edc4b95902830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef9eb698dbec1dc661b463d37c98246b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#aef9eb698dbec1dc661b463d37c98246b">check_conservation</a></td></tr>
+<tr class="memdesc:aef9eb698dbec1dc661b463d37c98246b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the Riemman intergral of the solution is equal to the integral of the initial data, i.e.  <a href="#aef9eb698dbec1dc661b463d37c98246b">More...</a><br/></td></tr>
+<tr class="separator:aef9eb698dbec1dc661b463d37c98246b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7bf8dc3bccc03c340c7c27f707566b8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#ae7bf8dc3bccc03c340c7c27f707566b8">error_norms_data</a></td></tr>
+<tr class="memdesc:ae7bf8dc3bccc03c340c7c27f707566b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and store various norms of the error vector for all grid resolutions for given initial condition and flux.  <a href="#ae7bf8dc3bccc03c340c7c27f707566b8">More...</a><br/></td></tr>
+<tr class="separator:ae7bf8dc3bccc03c340c7c27f707566b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae768df0b53092319d70b6568061122f1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#ae768df0b53092319d70b6568061122f1">convergence_table_row_data</a></td></tr>
+<tr class="memdesc:ae768df0b53092319d70b6568061122f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and store various norms of the error vector for all grid resolutions for given initial condition and flux.  <a href="#ae768df0b53092319d70b6568061122f1">More...</a><br/></td></tr>
+<tr class="separator:ae768df0b53092319d70b6568061122f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebcc3c1e70275cace88c47e2ffbe20b7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#aebcc3c1e70275cace88c47e2ffbe20b7">computation_attributes</a></td></tr>
+<tr class="memdesc:aebcc3c1e70275cace88c47e2ffbe20b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retreive attributes pertaining to the computation.  <a href="#aebcc3c1e70275cace88c47e2ffbe20b7">More...</a><br/></td></tr>
+<tr class="separator:aebcc3c1e70275cace88c47e2ffbe20b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99a6cd2aadc4ee45a7995ffab5d7ebdf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#a99a6cd2aadc4ee45a7995ffab5d7ebdf">create_convergence_table</a></td></tr>
-<tr class="memdesc:a99a6cd2aadc4ee45a7995ffab5d7ebdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate convergence table.  <a href="#a99a6cd2aadc4ee45a7995ffab5d7ebdf">More...</a><br/></td></tr>
+<tr class="memdesc:a99a6cd2aadc4ee45a7995ffab5d7ebdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Form and write the table containing information about the convergence of the numerical method for the given initial condition.  <a href="#a99a6cd2aadc4ee45a7995ffab5d7ebdf">More...</a><br/></td></tr>
 <tr class="separator:a99a6cd2aadc4ee45a7995ffab5d7ebdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77dfed956b42cdbe5fc4339c13f87adf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#a77dfed956b42cdbe5fc4339c13f87adf">include_content</a></td></tr>
-<tr class="separator:a77dfed956b42cdbe5fc4339c13f87adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6cd763f5cf9b5119e48833750f58e4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#a9e6cd763f5cf9b5119e48833750f58e4">output_html_content</a></td></tr>
+<tr class="memdesc:a9e6cd763f5cf9b5119e48833750f58e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Form and write an HTML document containing:  <a href="#a9e6cd763f5cf9b5119e48833750f58e4">More...</a><br/></td></tr>
+<tr class="separator:a9e6cd763f5cf9b5119e48833750f58e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62558b5e568d5705309a0792da76b4f5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#a62558b5e568d5705309a0792da76b4f5">include_content_html</a></td></tr>
+<tr class="memdesc:a62558b5e568d5705309a0792da76b4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an HTML file responsible for the dynamical display of content (plots, convergence tables) for all computations in the website main page.  <a href="#a62558b5e568d5705309a0792da76b4f5">More...</a><br/></td></tr>
+<tr class="separator:a62558b5e568d5705309a0792da76b4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ad1f7a4c194d8a2ab802e2d5aec50df5c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#ad1f7a4c194d8a2ab802e2d5aec50df5c">database_path</a> = &quot;output_database/computations_output.hdf5&quot;</td></tr>
+<tr class="memdesc:ad1f7a4c194d8a2ab802e2d5aec50df5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the HDF5 database in which the computational data is stored.  <a href="#ad1f7a4c194d8a2ab802e2d5aec50df5c">More...</a><br/></td></tr>
 <tr class="separator:ad1f7a4c194d8a2ab802e2d5aec50df5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e7429a57deaa662a6e9c1f40b84bd8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#a52e7429a57deaa662a6e9c1f40b84bd8">html_path</a> = &quot;MAT_228_website/&quot;</td></tr>
+<tr class="memdesc:a52e7429a57deaa662a6e9c1f40b84bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the website directory where the generated HTML documents will be written.  <a href="#a52e7429a57deaa662a6e9c1f40b84bd8">More...</a><br/></td></tr>
+<tr class="separator:a52e7429a57deaa662a6e9c1f40b84bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88659a6c20fb70cd273430b1029d7e2d"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#a88659a6c20fb70cd273430b1029d7e2d">initial_conditions</a></td></tr>
+<tr class="memdesc:a88659a6c20fb70cd273430b1029d7e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid initial condition input strings.  <a href="#a88659a6c20fb70cd273430b1029d7e2d">More...</a><br/></td></tr>
 <tr class="separator:a88659a6c20fb70cd273430b1029d7e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8835dfb3aa4d41cd54f9eba11f9fcee"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#aa8835dfb3aa4d41cd54f9eba11f9fcee">fluxes</a></td></tr>
+<tr class="memdesc:aa8835dfb3aa4d41cd54f9eba11f9fcee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid fluxes input strings.  <a href="#aa8835dfb3aa4d41cd54f9eba11f9fcee">More...</a><br/></td></tr>
 <tr class="separator:aa8835dfb3aa4d41cd54f9eba11f9fcee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251825897867f517585b9ab34c6f2eef"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelib__output__processing.html#a251825897867f517585b9ab34c6f2eef">convergence_table_header_data</a></td></tr>
+<tr class="memdesc:a251825897867f517585b9ab34c6f2eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header strings for the convergence table.  <a href="#a251825897867f517585b9ab34c6f2eef">More...</a><br/></td></tr>
+<tr class="separator:a251825897867f517585b9ab34c6f2eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Python scripts which create hdf5 database and process computational data. </p>
+<div class="textblock"><p>Python scripts devoted to processing the computational results, such as: </p>
+<ul>
+<li>
+creating the computational database and preparing the appropriate computational context  </li>
+<li>
+calculating the convergence rates  </li>
+<li>
+plotting the results  </li>
+<li>
+incorporating the processed data into HTML documents for greater readability  </li>
+</ul>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="aef9eb698dbec1dc661b463d37c98246b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def lib_output_processing.check_conservation </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>initial_condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check whether the Riemman intergral of the solution is equal to the integral of the initial data, i.e. </p>
+<p>check if the numerical method preserved the conservation property of the linear advection, up to the floating point error.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_condition</td><td>One of the valid initial conditions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#a88659a6c20fb70cd273430b1029d7e2d" title="Valid initial condition input strings. ">initial_conditions</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flux</td><td>One of the valid fluxes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#aa8835dfb3aa4d41cd54f9eba11f9fcee" title="Valid fluxes input strings. ">fluxes</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aebcc3c1e70275cace88c47e2ffbe20b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def lib_output_processing.computation_attributes </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>initial_condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retreive attributes pertaining to the computation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_condition</td><td>One of the valid initial conditions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#a88659a6c20fb70cd273430b1029d7e2d" title="Valid initial condition input strings. ">initial_conditions</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flux</td><td>One of the valid fluxes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#aa8835dfb3aa4d41cd54f9eba11f9fcee" title="Valid fluxes input strings. ">fluxes</a></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Dictionary of attributes pertaining to the computation. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae768df0b53092319d70b6568061122f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def lib_output_processing.convergence_table_row_data </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>_error_norms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute and store various norms of the error vector for all grid resolutions for given initial condition and flux. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>Refinement exponent in the expression for grid stepsize: h = 2^(-k)</td></tr>
+    <tr><td class="paramname">_error_norms</td><td>Array of dictionaries indexed by grid refinement exponent containing "norm : error" key-value pairs.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Convergence data in the form of a dictionary containing key-value pairs necessary to form one row in the convergence table for the given refinement exponent. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a99a6cd2aadc4ee45a7995ffab5d7ebdf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -145,14 +304,21 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Generate convergence table. </p>
+<p>Form and write the table containing information about the convergence of the numerical method for the given initial condition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">initial_condition</td><td></td></tr>
-    <tr><td class="paramname">flux</td><td></td></tr>
+    <tr><td class="paramname">initial_condition</td><td>One of the valid initial conditions. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#a88659a6c20fb70cd273430b1029d7e2d" title="Valid initial condition input strings. ">initial_conditions</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flux</td><td>One of the valid fluxes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#aa8835dfb3aa4d41cd54f9eba11f9fcee" title="Valid fluxes input strings. ">fluxes</a> </dd></dl>
 
 </div>
 </div>
@@ -171,7 +337,7 @@ Variables</h2></td></tr>
 
 <p>Create an hdf5 file in which the results of the computation will be stored. </p>
 <p>Creates an hdf5 file with the necessary group hierarchy to store the results of computations in an organized manner.</p>
-<p>This function should only be used once: once the hdf5 file is created with the appropriate group structure, the main program shall not alter that structure </p>
+<p>This function should only be used once: once the hdf5 file is created with the appropriate group structure, the main program shall not alter that structure. </p>
 
 </div>
 </div>
@@ -199,7 +365,64 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Plot initial data and four computations to illustrate behavior of the numerical method as the grid resolution increases. </p>
+<p>Plot initial data and four selected computations to illustrate behavior of the numerical method as the grid resolution increases. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_condition</td><td>One of the valid initial conditions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#a88659a6c20fb70cd273430b1029d7e2d" title="Valid initial condition input strings. ">initial_conditions</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flux</td><td>One of the valid fluxes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#aa8835dfb3aa4d41cd54f9eba11f9fcee" title="Valid fluxes input strings. ">fluxes</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae7bf8dc3bccc03c340c7c27f707566b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def lib_output_processing.error_norms_data </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>initial_condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute and store various norms of the error vector for all grid resolutions for given initial condition and flux. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_condition</td><td>One of the valid initial conditions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#a88659a6c20fb70cd273430b1029d7e2d" title="Valid initial condition input strings. ">initial_conditions</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flux</td><td>One of the valid fluxes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#aa8835dfb3aa4d41cd54f9eba11f9fcee" title="Valid fluxes input strings. ">fluxes</a></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Array of dictionaries indexed by grid refinement exponent containing "norm : error" key-value pairs </dd></dl>
 
 </div>
 </div>
@@ -217,7 +440,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ord</em>&#160;</td>
+          <td class="paramname"><em>norm_type</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -227,24 +450,24 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Grid norm of a function, represented as a vector in <img class="formulaInl" alt="$ \mathbf{R}^M $" src="form_1.png"/> (redefined based on <a href="https://github.com/numpy/numpy/blob/v1.9.1/numpy/linalg/linalg.py#L1924">linalg.py</a>) </p>
+<p>Grid norm of a function, represented as a vector in <img class="formulaInl" alt="$ \mathbf{R}^M $" src="form_0.png"/> (redefined based on <a href="https://github.com/numpy/numpy/blob/v1.9.1/numpy/linalg/linalg.py#L1924">linalg.py</a>) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>Input array</td></tr>
-    <tr><td class="paramname">ord</td><td>Order of the norm, which can be {1, 2, numpy.inf}</td></tr>
+    <tr><td class="paramname">x</td><td>Input array.</td></tr>
+    <tr><td class="paramname">norm_type</td><td>Type of the norm, which can be {1, 2, numpy.inf}, i.e. one-, two-, and sup-norm.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Norm of the vector </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Norm of the vector. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a77dfed956b42cdbe5fc4339c13f87adf"></a>
+<a class="anchor" id="a62558b5e568d5705309a0792da76b4f5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def lib_output_processing.include_content </td>
+          <td class="memname">def lib_output_processing.include_content_html </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -252,9 +475,129 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create an HTML file responsible for the dynamical display of content (plots, convergence tables) for all computations in the website main page. </p>
+<p>Its purpose is to avoid inserting content into the HTML document manually, since it is highly error prone due to large amount og text to be manipulated. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab4d9a51bfc63dd7cf7e94e3f697c0442"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def lib_output_processing.initial_data </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>initial_condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate the initial data based on the desired initial condition. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_condition</td><td>One of the valid initial conditions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#a88659a6c20fb70cd273430b1029d7e2d" title="Valid initial condition input strings. ">initial_conditions</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>Refinement exponent in the expression for grid stepsize: h = 2^(-k)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Array containing requested initial data. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9e6cd763f5cf9b5119e48833750f58e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def lib_output_processing.output_html_content </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>initial_condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Form and write an HTML document containing: </p>
+<ul>
+<li>
+plot of the computed solutions and the initial data  </li>
+<li>
+convergence table  </li>
+<li>
+analysis of the results  </li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_condition</td><td>One of the valid initial conditions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#a88659a6c20fb70cd273430b1029d7e2d" title="Valid initial condition input strings. ">initial_conditions</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flux</td><td>One of the valid fluxes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacelib__output__processing.html#aa8835dfb3aa4d41cd54f9eba11f9fcee" title="Valid fluxes input strings. ">fluxes</a> </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a251825897867f517585b9ab34c6f2eef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary lib_output_processing.convergence_table_header_data</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacelib__output__processing.html">    1</a></span>&#160;= { </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; <span class="stringliteral">&quot;k&quot;</span> : <span class="stringliteral">&quot;k&quot;</span>,</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; <span class="stringliteral">&quot;M&quot;</span> : <span class="stringliteral">&quot;M = 2^k&quot;</span>, </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; <span class="stringliteral">&quot;h&quot;</span> : <span class="stringliteral">&quot;h = M^(-1)&quot;</span>, </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; <span class="stringliteral">&quot;sup_norm&quot;</span> : <span class="stringliteral">&quot;Sup-Norm&quot;</span>, </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; <span class="stringliteral">&quot;sup_norm_rate&quot;</span> : <span class="stringliteral">&quot;Rate&quot;</span>, </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; <span class="stringliteral">&quot;one_norm&quot;</span> : <span class="stringliteral">&quot;One-Norm&quot;</span>, </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; <span class="stringliteral">&quot;one_norm_rate&quot;</span> : <span class="stringliteral">&quot;Rate&quot;</span>, </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; <span class="stringliteral">&quot;two_norm&quot;</span> : <span class="stringliteral">&quot;Two-Norm&quot;</span>, </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; <span class="stringliteral">&quot;two_norm_rate&quot;</span> : <span class="stringliteral">&quot;Rate&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; }</div>
+</div><!-- fragment -->
+<p>Header strings for the convergence table. </p>
+
+</div>
+</div>
 <a class="anchor" id="ad1f7a4c194d8a2ab802e2d5aec50df5c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -264,6 +607,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Path to the HDF5 database in which the computational data is stored. </p>
 
 </div>
 </div>
@@ -278,14 +623,32 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacelib__output__processing.html">    1</a></span>&#160;= [</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; <span class="stringliteral">&quot;Upwind&quot;</span>, </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; <span class="stringliteral">&quot;Lax-Friedrichs&quot;</span>, </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; <span class="stringliteral">&quot;Lax-Wendroff&quot;</span>, </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; <span class="stringliteral">&quot;Lax_Friedrichs&quot;</span>, </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; <span class="stringliteral">&quot;Lax_Wendroff&quot;</span>, </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; <span class="stringliteral">&quot;Fromm&quot;</span>, </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; <span class="stringliteral">&quot;Fromm - van Leer&quot;</span>, </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; <span class="stringliteral">&quot;Flux-Corrected Transport&quot;</span>, </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; <span class="stringliteral">&quot;Lax Wendroff Fourth Order&quot;</span>    </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  ]</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; <span class="stringliteral">&quot;Fromm_CFL_half&quot;</span>, </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; <span class="stringliteral">&quot;Fromm_van_Leer&quot;</span>, </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; <span class="stringliteral">&quot;Fromm_van_Leer_CFL_half&quot;</span>,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; <span class="stringliteral">&quot;Flux_Corrected_Transport&quot;</span>, </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; <span class="stringliteral">&quot;Lax_Wendroff_Fourth_Order&quot;</span>    </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  ]</div>
 </div><!-- fragment -->
+<p>Valid fluxes input strings. </p>
+
+</div>
+</div>
+<a class="anchor" id="a52e7429a57deaa662a6e9c1f40b84bd8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string lib_output_processing.html_path = &quot;MAT_228_website/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Path to the website directory where the generated HTML documents will be written. </p>
+
 </div>
 </div>
 <a class="anchor" id="a88659a6c20fb70cd273430b1029d7e2d"></a>
@@ -298,17 +661,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacelib__output__processing.html">    1</a></span>&#160;= [</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; <span class="stringliteral">&quot;Square Wave&quot;</span>, </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; <span class="stringliteral">&quot;Square_Wave&quot;</span>, </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; <span class="stringliteral">&quot;Semicircle&quot;</span>, </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; <span class="stringliteral">&quot;Gaussian Pulse&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; <span class="stringliteral">&quot;Gaussian_Pulse&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  ]</div>
 </div><!-- fragment -->
+<p>Valid initial condition input strings. </p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 9 2015 14:27:51 for 228A Computing Homework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 27 2015 16:43:08 for 228A Computing Homework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

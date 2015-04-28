@@ -1,0 +1,11 @@
+<p>
+Upwind method demonstrates highly diffusive behavior: the discontinuities of the shock wave are smoothened out by the numerical solution. This implies that Upwind method is not appropriate when one needs to capture the profile of a shock wave as precisely as possible. Such behavior is explained by the fact that the modified equation for Upwind method is the advection-diffusion equation, i.e. Upwind approximates diffusive advection rather that advection without dissipation. 
+</p>
+
+<p>
+The convergence table indicates that there is no uniform convergence: that is natural, because it is impossible to approximate a discontinuous function with a continuous function uniformly. The rates of convergence for one-norm and two-norm are less than one, because the truncation error analysis relied on an assumption that the initial data is at least twice continuously differentiable, which does not take place in this case.
+</p> 
+
+<p>
+The fact that the convergence rate for the one-norm is 0.5 is due to the fact that the one-norm of the difference between the exact solution of the modified equation and the exact solution of the linear advection equation (with the Square Wave initial condition) decreases as a square root of the grid stepsize.
+</p>

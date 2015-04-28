@@ -1,4 +1,4 @@
- k   M = 2^k          h           Sup-Norm     Rate     One-Norm     Rate     Two-Norm     Rate 
+ k   M = 2^k     h = M^(-1)       Sup-Norm     Rate     One-Norm     Rate     Two-Norm     Rate 
 
  7     128      0.0078125000    0.4924752992   0.01   0.2316238935   0.48   0.2641833197   0.34 
  8     256      0.0039062500    0.4944372041   0.01   0.1638641818   0.50   0.2191652592   0.27 

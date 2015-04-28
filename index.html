@@ -15,8 +15,13 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>     
 <script> 
+// Results of the computations are stored in "html/computations" 
  function include_content(content_id) {
   $("#" + content_id).load("html/computations/" + content_id + ".html");
+  };
+// Analyses of the computations are stored in "html/computations/text" 
+ function include_text(content_id) {
+  $("#" + content_id + "_text").load("html/computations/text/" + content_id + ".html");
   };
 </script> 
   
@@ -24,14 +29,15 @@
 
 <body>
 
+<!-- Navigation menu-->
 <div id="navigation">      
     <ul>
      
       <li><a class="menuNode">Theory Homework</a>
           <ul>
 	    <li><a href="pdf/Theory_Homework_1.pdf">Homework I</a></li>
-	    <li><a href="pdf/Theory_Homework_1.pdf">Homework II</a></li>
-	    <li><a href="pdf/Theory_Homework_1.pdf">Homework III</a></li>
+	    <li><a href="pdf/Theory_Homework_2.pdf">Homework II</a></li>
+	    <li><a href="pdf/Theory_Homework_3.pdf">Homework III</a></li>
 	  </ul>
       </li>
       
@@ -41,9 +47,9 @@
 	    <li><a href="#square_wave_lax_friedrichs">Lax-Friedrichs</a></li>
  	    <li><a href="#square_wave_lax_wendroff">Lax-Wendroff</a></li> 
 	    <li><a href="#square_wave_fromm">Fromm</a></li>
-	    <li><a href="#square_wave_fvl">Fromm with Van Leer Slope Limiter</a></li>
-	    <li><a href="#square_wave_fct">Flux-Corrected Transport</a></li>
-	    <li><a href="#square_wave_lw4">Lax-Wendroff Fourth Order</a></li> 
+	    <li><a href="#square_wave_fromm_van_leer">Fromm with Van Leer Slope Limiter</a></li>
+	    <li><a href="#square_wave_flux_corrected_transport">Flux-Corrected Transport</a></li>
+	    <li><a href="#square_wave_lax_wendroff_fourth_order">Lax-Wendroff Fourth Order</a></li> 
 	  </ul>
       </li>
       
@@ -53,9 +59,9 @@
 	    <li><a href="#semicircle_lax_friedrichs">Lax-Friedrichs</a></li>
 	    <li><a href="#semicircle_lax_wendroff">Lax-Wendroff</a></li>
 	    <li><a href="#semicircle_fromm">Fromm</a></li>
-	    <li><a href="#semicircle_fvl">Fromm with Van Leer Slope Limiter</a></li>
-	    <li><a href="#semicircle_fct">Flux-Corrected Transport</a></li>
-	    <li><a href="#semicircle_lw4">Lax-Wendroff Fourth Order</a></li>
+	    <li><a href="#semicircle_fromm_van_leer">Fromm with Van Leer Slope Limiter</a></li>
+	    <li><a href="#semicircle_flux_corrected_transport">Flux-Corrected Transport</a></li>
+	    <li><a href="#semicircle_lax_wendroff_fourth_order">Lax-Wendroff Fourth Order</a></li>
 	  </ul>
       </li>
       
@@ -65,9 +71,9 @@
 	    <li><a href="#gaussian_pulse_lax_friedrichs">Lax-Friedrichs</a></li>
 	    <li><a href="#gaussian_pulse_lax_wendroff">Lax-Wendroff</a></li>
 	    <li><a href="#gaussian_pulse_fromm">Fromm</a></li>
-	    <li><a href="#gaussian_pulse_fvl">Fromm with Van Leer Slope Limiter</a></li>
-	    <li><a href="#gaussian_pulse_fct">Flux-Corrected Transport</a></li>
-	    <li><a href="#gaussian_pulse_lw4">Lax-Wendroff Fourth Order</a></li>
+	    <li><a href="#gaussian_pulse_fromm_van_leer">Fromm with Van Leer Slope Limiter</a></li>
+	    <li><a href="#gaussian_pulse_flux_corrected_transport">Flux-Corrected Transport</a></li>
+	    <li><a href="#gaussian_pulse_lax_wendroff_fourth_order">Lax-Wendroff Fourth Order</a></li>
 	  </ul>
       </li>
                
@@ -81,12 +87,15 @@
         <script type="text/javascript" src="javascript/navigation.js"></script>
 </div>
 
+<!-- Block that wraps the main content-->
 <div id="wrap">
 
+<!-- Webpage header-->
   <div id="header">
   <h1>MAT 228A: Numerical Solution of Partial Differential Equations</h1>
   </div>
-  
+
+<!-- HTML document responsible for the dynamic display of content (plots, convergence tables) for all computations -->
 <div id="include_content">
     <script>include_content("include_content")</script>
 </div>
@@ -97,6 +106,7 @@
 
 </div>
 
+<!-- Webpage footer-->
 <div id="footer">
   <p>Design based on <a href="http://www.opendesigns.org/design/grey-fluid/">Grey Fluid</a> template from 
     <a href="http://www.opendesigns.org/">opendesigns.org</a></p> </div>

@@ -1,0 +1,7 @@
+<p>
+Upwind method demonstrates highly diffusive behavior: as the advection progresses, the solution approaches a constant. This implies that Upwind method is not appropriate when it is necessary to preserve the wave profile precisely when the advection problem does not have any inherent dissipation mechanism: dissipation can only be numerical. Such behavior is explained by the fact that the modified equation for Upwind method is the advection-diffusion equation, i.e. Upwind approximates diffusive advection rather that advection without dissipation. Since diffusion processes result in maximization of entropy, which corresponds to the solution approaching a constant, so does Upwind method. 
+</p>
+
+<p>
+The convergence table indicates in all norms first order convergence takes place, which is what is expected by the truncation error analysis. Indeed, all of the assumptions of the truncation error analysis hold in the case of Gaussian Pulse, since it is infinitely differentiable.
+</p>
