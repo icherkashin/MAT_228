@@ -1,9 +1,5 @@
 #navigation {
-      position: -webkit-sticky;
-      position: -moz-sticky;
-      position: -ms-sticky;
-      position: -o-sticky;
-      position: sticky;
+      position: fixed;
       top: 5px;
       float: left;
       width: 19%;
