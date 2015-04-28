@@ -1,0 +1,150 @@
+body { 
+   font-family: Verdana, sans-serif;
+    line-height: 1.4;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+  margin-top: 10px;
+  margin-left:auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+table #caption {
+  color: #000;
+  background-color: #d4d5d8;
+}
+
+table #caption a {
+  color: #000;
+}
+
+table #caption a:hover {
+  color: #336699;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+
+table th {
+  font-size: 15px;
+  color: #323232;
+  background-color: #eee;
+}
+
+table td.colored {
+   font-size: 16px;
+   background-color: #f1f1c1; 
+}
+
+a { 
+    color: #336699; 
+    text-decoration: none;
+}
+
+a:focus { 
+  outline: none;
+}
+
+figure img.center {
+    border: 1px solid #336699;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+figure figcaption {  
+    font-style: italic;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;   
+    margin: 0;
+    padding: 20px 0 0 10px;
+    font-weight: 100;
+    letter-spacing: -2px;
+    color: #336699;
+}
+
+#wrap { 
+    width: 98%;
+    margin: 5px auto;
+}
+
+#header {
+    height: 80px;
+    margin-left: 300px;
+    background: #eee;
+    border: 2px solid #b0b0b0; 
+}
+
+#content {
+    float: right;
+    width: 75%;
+    background: #F9F7ED;
+    margin-top: 10px;
+    padding: 0 1%;
+    border: 2px solid #b0b0b0;
+}
+
+#content h2 {
+    margin-bottom: -5px;
+    text-align:center;
+    color: #336699;	
+    font-weight: 100;
+    letter-spacing: -2px;
+}
+
+#content h3 {
+    margin: 0 50px 15px 50px;
+}
+
+#content p { 
+    margin: 0 100px 0 100px;
+    text-indent: 50px;
+    font-size: 19px;
+    line-height: 22px;
+    font-family: "Times New Roman", Serif;
+    padding: 0 0 10px 0; 
+    color: #232323;
+}
+
+#content ul { 
+    padding: 0 20px 10px 30px; 
+}
+
+#footer { 
+    text-align: center;
+    color: #212121;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #ccc;
+    background: #eee;
+}
+
+#footer p { 
+    padding: 0; margin: 0; 
+}
+
+#footer a { 
+    color: #212121; 
+    font-style: italic;
+}
+
+#footer a:hover { 
+    text-decoration: underline; 
+}
