@@ -239,6 +239,7 @@ std::valarray<double> _fluxes(M+1);
 
 // Retrieval of the initial data and storing in in the scalar field array (i.e. initializing the field array with the initial data)   
   field_initial_dataset.read(field, H5::PredType::NATIVE_DOUBLE);
+  field_initial_dataset.close();
 
 // Indicate that computation has started to the user  
 std::cout << group_path << "/" << dataset_name << ": computation in progress" << std::endl;  
@@ -281,6 +282,7 @@ auto execution_time_minutes = std::chrono::duration_cast<std::chrono::minutes>(t
 
 // Write the results of the computations (final updated state of the scalar field) into the database
   field_dataset.write(field, H5::PredType::NATIVE_DOUBLE);
+  field_dataset.close();
 
 // Indicate that the computation has completed and the time it took to the user   
 std::cout << group_path << "/" << dataset_name << ": computation completed in " << execution_time_seconds << " seconds (" << execution_time_minutes << " minutes)" << std::endl;
