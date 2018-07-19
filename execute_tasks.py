@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import lib_output_processing as output
 import subprocess
 
