@@ -14,8 +14,9 @@ for initial_condition in output.initial_conditions:
  for flux in output.fluxes:
   task[0] = initial_condition
   task[1] = flux
-  for k in range(6,17):
-   subprocess.call(["./compute_task", task[0], task[1], str(k)])
+  # Practical range is from k = 6 to k = 17
+  for k in range(6,10):
+   subprocess.call(["./compute_task", *task, str(k)])
 
 # Process the results for the selected initial conditions and grid resolutions
 for initial_condition in output.initial_conditions:

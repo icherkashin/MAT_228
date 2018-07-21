@@ -3,7 +3,7 @@
  * 
  * \par Description
  * 
- * Implementation of the conservative finite difference methods for MAT 228A computing homework. 
+ * Implementation of conservative finite difference methods for MAT 228A computing homework. 
  * 
  * \par Computation
  * C++
@@ -12,13 +12,13 @@
  * hdf5
  * 
  * \par Data processing
- * Python + h5py + matplotlib
+ * python3 + h5py + matplotlib
  * 
  * \par Installation
  * 
  * <ol>
  *  <li>
- *   Install libhdf5-dev, python-h5py and python-matplotlib (e.g. using "apt-get install")
+ *   Install libhdf5-dev, python3-h5py and python3-matplotlib (e.g. using "apt-get install")
  *  </li>
  *  <li>
  *   Adjust the parameters in the CMakeLists.txt file according to your installation directory and location of hdf5 library
@@ -38,7 +38,7 @@
  * <ul><li>./compute_task "Initial Condition" "Flux" "Refinement Exponent"</li></ul>
  * 
  * 
- * The sequence of tasks is programed in the file "execute_tasks.py" using python syntax and functions 
+ * The sequence of tasks is programmed in the file "execute_tasks.py" using python syntax and functions 
  * defined in the file "lib_output_processing.py."
  * 
  * An example script can be found in the file "execute_task.py" which performs computations for all initial

@@ -85,8 +85,6 @@ def initial_data(initial_condition, k):
 
  @return Array containing requested initial data.
  """
-
- data = []
  
  M = 2**k
  h = 1/M
@@ -104,16 +102,15 @@ def initial_data(initial_condition, k):
   return exp(-256*pow(x - 0.5, 2)) 
  
  if initial_condition == "Square_Wave":
-  for i in range(0, M):
-   data.append(square_wave(h*i))
+  initial_condition = square_wave
  elif initial_condition == "Semicircle":
-  for i in range(0, M):
-   data.append(semicircle(h*i))
- else:
-  for i in range(0, M):
-   data.append(gaussian_pulse(h*i))
-   
- return data
+  initial_condition = semicircle
+ elif initial_condition == "Gaussian_Pulse":
+  initial_condition = gaussian_pulse
+ 
+ iterator = ( initial_condition(i) for i in range(0, M) )
+
+ return np.fromiter(iterator, float64)
 
 def create_output_database():
  """! 
@@ -326,6 +323,7 @@ def error_norms_data(initial_condition, flux):
   }
   
  computations_database.close()
+
  return _error_norms
  
 def convergence_table_row_data(k, _error_norms):
@@ -356,6 +354,7 @@ def convergence_table_row_data(k, _error_norms):
  data["one_norm_rate"] = convergence_rate(k, "one_norm")
  data["two_norm"] = _error_norms[k]["two_norm"]
  data["two_norm_rate"] = convergence_rate(k, "two_norm")
+
  return data
 
 def computation_attributes(initial_condition, flux):  
@@ -377,6 +376,7 @@ def computation_attributes(initial_condition, flux):
  attributes["T"] = computations_database[group_path].attrs["T"]
  attributes["CFL"] = computations_database[group_path].attrs["CFL"]
  computations_database.close()
+ 
  return attributes
 
 def create_convergence_table(initial_condition, flux):
