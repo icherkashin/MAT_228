@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo apt-get install \
+ python3-h5py \
+ python3-matplotlib \
+ libhdf5-dev
