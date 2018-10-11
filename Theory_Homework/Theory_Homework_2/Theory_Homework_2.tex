@@ -1,0 +1,343 @@
+%% This is LaTeX template for preparing papers for Publ. Inst. Math.; version of 12.12.2013
+%% Please delete everything begining with %% (DOUBLE %).
+
+% Submission number: please insert
+\documentclass[a4paper]{amsproc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd} %% Package for commutative diagrams
+%\usepackage[dvips]{graphicx} %% Package for inserting illustrations/figures
+
+%% The following packages are useful (you may want to use them):
+%\usepackage{refcheck} %% Checks whether enumerated equations are referred to or not.
+                       %% Please remove unnecessary numbers.
+%\usepackage{cmdtrack} %% Checks whether all author defined macros are used or not
+                       %% (see the end of .log file); unused ones should be removed.
+%% Both of the packages have some limitations---consult package documentations.
+\usepackage{textcomp}
+
+\theoremstyle{plain}
+ \newtheorem*{thm}{Theorem}
+ \newtheorem{prop}{Proposition}[section]
+ \newtheorem{lem}{Lemma}[section]
+ \newtheorem{cor}{Corollary}[section]
+\theoremstyle{definition}
+ \newtheorem{exm}{Example}[section]
+ \newtheorem{dfn}{Definition}[section]
+\theoremstyle{remark}
+ \newtheorem{rem}{Remark}[section]
+ \numberwithin{equation}{section}
+
+%% Please, do not change the following four lines:
+\renewcommand{\le}{\leqslant}\renewcommand{\leq}{\leqslant}
+\renewcommand{\ge}{\geqslant}\renewcommand{\geq}{\geqslant}
+\renewcommand{\setminus}{\smallsetminus}
+\setlength{\textwidth}{28cc} \setlength{\textheight}{42cc}
+
+
+% \let\oldequation=\equation
+% \let\endoldequation=\endequation
+% \renewenvironment{equation}{\begin{oldequation}}{\end{oldequation}\vspace{1mm}}
+
+\providecommand{\norm}[1]{\lVert#1 \rVert}
+\providecommand{\R}{\begin{pmatrix} R \\ 0 \end{pmatrix}}
+\providecommand{\Q}{\begin{pmatrix} Q_1^{T} \\ Q_2^{T} \end{pmatrix}}
+\providecommand{\SVD}{\begin{pmatrix} \Sigma \\ 0 \end{pmatrix}}
+\providecommand{\SVDr}{\begin{pmatrix} \Sigma_1 & 0 \\ 0 & 0 \end{pmatrix}}
+\providecommand{\V}{\begin{pmatrix} V_1^{T} \\ V_2^{T} \end{pmatrix}}
+\providecommand{\U}{\begin{pmatrix} U_1  U_2 \end{pmatrix}}
+\providecommand{\Vr}{\begin{pmatrix} v_1^{T} \\ \vdots \\ v_r^{T} \end{pmatrix}}
+\providecommand{\Vn}{\begin{pmatrix} v_1^{T} \\ \vdots \\ v_n^{T} \end{pmatrix}}
+\providecommand{\Vni}{\begin{pmatrix} v_{1i} \dots v_{ni}\end{pmatrix}}
+\providecommand{\B}{\begin{pmatrix} b_1^{T} \\ \vdots \\ b_n^{T} \end{pmatrix}}
+
+\providecommand{\F}{\begin{pmatrix} w^{(k_1)} \hdots w^{(k_M)} \end{pmatrix}}
+\providecommand{\fourier}{\begin{pmatrix} \langle f^h, w^{(k_1)} \rangle \\ \hdots \vspace{1mm} \\ \langle f^h, w^{(k_M)} \rangle \end{pmatrix}}
+
+\title[MAT 228A Theory Homework 2]{MAT 228A Theory Homework 2}
+
+% \subjclass[2010]{Primary REQUIRED; Secondary OPTIONAL}
+
+%% Please use the newest classification -- 2010
+%% available at  http://msc2010.org/MSC-2010-server.html
+%% and the newest amsproc.cls -- from 2009!!
+%% Please, classify to the third level,
+%% e.g., 26A and 26Axx are not satisfsctory.
+
+% \keywords{optional, but desirable}
+
+\author[Cherkashin]{\bfseries Ivan Cherkashin}
+
+% \address{
+% Department of Mathematics \\ % \hfill (Received 00 00 2010)\\
+% Our University   \\ %\hfill (Revised  00 00 2010)\\
+% Town\\
+% Country}
+% \email{user@server}
+
+%% OTHER AUTHOR(S):
+%\author[]{}
+%\address{ }
+%\email{}
+
+% \thanks{Partially supported by ... } %% optional
+
+% \dedicatory{Communicated by }
+%% We use this for communication information.
+%% If you want do dedicate your paper to somebody, then please use \thanks{}
+
+\begin{document}
+
+%{\begin{flushleft}\baselineskip9pt\scriptsize
+%PUBLICATIONS DE L'INSTITUT MATH\'EMATIQUE\newline
+%Nouvelle s\'erie, tome 91(105) (2012), od--do \hfill DOI:
+%\end{flushleft}}
+\vspace{18mm} \setcounter{page}{1} \thispagestyle{empty}
+
+
+% \begin{abstract}
+% An abstract is OBLIGATORY!
+% Please do not use author defined macros in the abstract
+% and avoid references to anything in the paper,
+% since the abstract will be detached from the article.
+% \end{abstract}
+
+\maketitle
+
+\section*{Problem 1}
+
+\begin{thm} \label{} 
+$\lVert f \rVert^{2}_{2} = \lVert \hat{f} \rVert^{2}_{2}$, where $\hat{f}$ is the discrete Fourier transform of $f$.
+\end{thm}
+
+\begin{proof}
+Let $\mathbb{C}^M$ inherit the structure of a Hilbert space from the inner product defined in equation (5). The discrete Fourier transform is a linear operator in this space:
+
+\begin{equation}\label{eq:1.1}
+\hat{f} = \fourier = F^{*} f
+\end{equation}
+
+Fourier matrix $F = \F$ is unitary, since the column vectors of $F$ form an orthonormal basis of $\mathbb{C}^M$. Naturally, the matrix $F^*$ is also unitary. By definition, unitary operators preserve inner products and, therefore, norms:
+
+\begin{equation}\label{eq:1.2}  
+ \lVert \hat{f} \rVert^{2}_{2} = \langle \hat{f}, \hat{f} \rangle = \langle F^{*}f, F^{*}f \rangle = \langle f,f \rangle = \lVert f \rVert^{2}_{2} 
+\end{equation}
+
+\end{proof}
+
+\section*{Problem 2}
+
+\begin{thm} \label{some label} 
+Prove that $\hat{f^h} = f^h$, where $\hat{f^h} = \sum\limits_{k} \langle f^h, w^{(k)} \rangle w^{(k)}$
+\end{thm}
+
+\begin{proof}
+
+Fourier matrix $F$ is unitary: $FF^{*} = F^{*}F = I \implies$
+
+\begin{equation}\label{eq:2.1}  
+\hat{f^h} = \sum\limits_{k} \langle f^h, w^{(k)} \rangle w^{(k)} = \F \fourier = FF^* f^h = f^h 
+\end{equation}
+
+The function
+
+\begin{equation}\label{eq:2.2}  
+\hat{f}(x) = \sum\limits_{k} \langle f^h, w^{(k)} \rangle w^{(k)}(x)
+\end{equation}
+
+is infinitely differentiable, as a finite linear combination of infinitely differentiable functions, and is equal to the original function $f$ at the grid points. Therefore, $\hat{f}$ interpolates $f$ (trigonometric interpolation).
+
+\end{proof}
+
+\section*{Problem 3}
+
+\begin{lem} \label{some label}
+$$ \overline{c_k} = c_{-k} \Longleftrightarrow \sum\limits_{\lvert k \rvert \leq n} c_k e^{2 \pi i k x} \in \mathbb{R}~ \forall x \in [0,1]$$
+\end{lem}
+
+\begin{proof}[Sufficiency] 
+Let $\overline{c_k} = c_{-k},~ \lvert k \rvert \leq n$. Then
+$$ S_n = \sum\limits_{\lvert k \rvert \leq n} c_k e^{2 \pi i k x} = c_0 + \sum\limits_{k = 1}^{n} ( c_k e^{2 \pi i k x} + c_{-k} e^{- 2 \pi i k x} ) = c_0 + \sum\limits_{k = 1}^{n} ( c_k e^{2 \pi i k x} + \overline{c_k e^{2 \pi i k x}} )$$ which is invariant under complex conjugation: $$\overline{S_n} = S_n \Longrightarrow S_n \in \mathbb{R}$$
+\end{proof}
+
+\begin{proof}[Necessity] Let $S_n \in \mathbb{R}$ Then $$ S_n - \overline{S_n} = 0 \Longleftrightarrow \sum\limits_{\lvert k \rvert \leq n} (c_k - \overline{c_{-k}}) e^{2 \pi i k x} = 0$$
+Since $e^{2 \pi i k x}$ are linearly independent, the identity holds for all $x$ if and only if $$c_k - \overline{c_{-k}} = 0$$
+\end{proof}
+
+\subsection*{(a)}
+Since $$ \hat{f}(x) = \sum\limits_{-\frac{M}{2} < k \leq \frac{M}{2}} c_k e^{2 \pi i k x} = \sum\limits_{\lvert k \rvert \leq \frac{M}{2}} c_k e^{2 \pi i k x} - c_{-\frac{M}{2}} e^{-M \pi i x} = \Sigma(x) + r(x) $$
+
+and since $\Sigma(x) \in \mathbb{R}$, by the lemma, and, $r(x) \in \mathbb{C}$, $$ S(x)+r(x) = \hat{f}(x) \in \mathbb{C} $$ 
+
+i.e. the interpolation is not strictly real-valued ($N$ must be odd in order to obtain real-valued trigonometric interpolation in the complex form).
+\subsection*{(b)}
+
+Let $ \hat{f}(x)$ be strictly real-valued. Then
+
+$$ \hat{f}(x) - \overline{\hat{f}(x)} = \sum\limits_{k \leq M-1} (c_k e^{2 \pi i k x} - \overline{c_k} e^{-2 \pi i k x}) \equiv 0 \Longleftrightarrow c_k = 0 $$
+
+since complex exponents with different wavenumbers $k$ are linearly independent. 
+
+But then $\hat{f}(x) \equiv 0 $, which means that $\hat{f}(x)$ is, in general, complex.
+
+\section*{Problem 4}
+
+  \subsection*{(a)}
+
+  \begin{thm}
+  Compute the symbol for the downwind method: $$ (Lu)_i = u^n_i + \sigma(u^n_i - u^n_{i+1}) $$
+  \end{thm}
+
+  \begin{proof}
+  $$L = \sum\limits_{s=0}^{1} c_s S^s = 1 + \sigma (1 - S^1) = (1+\sigma) - \sigma S^1 $$
+  The symbol is $$ \lambda(\beta) = \sum\limits_{s=0}^{1} c_s e^{i \beta s} = (1+\sigma) - \sigma e^{i \beta}$$
+  \end{proof}
+
+\subsection*{(b)}
+
+  \begin{thm}
+  Find amplification factors for all modes, $k \in \overline{[-\frac{M}{2}+1, \frac{M}{2}]}$
+  \end{thm}
+
+  \begin{proof}
+  The amplification factor for $k$-th mode is $\lvert \lambda(\beta(k)) \rvert$.
+  
+  \begin{multline} \lvert \lambda(\beta) \rvert^2 = \lambda(\beta)\overline{\lambda(\beta)} = ((1+\sigma) - \sigma e^{i \beta})((1+\sigma) - \sigma e^{-i \beta}) = \\
+   (1+\sigma)^2 + \sigma^2 -2\sigma(1+\sigma)\cos\beta = 1 + 2\sigma(1+\sigma)(1-\cos\beta) \\
+   \Longrightarrow \lvert \lambda(\beta(k)) \rvert = \sqrt{1 + 2\sigma(1+\sigma)(1-\cos 2\pi kh)}
+   \end{multline}
+   
+   Thus, \emph{all modes are amplified} except $$ \cos\beta(k) = \cos 2\pi kh = 0 \Longleftrightarrow k = 0 $$
+   
+   Since almost all modes are amplified by the finite difference operator, the downwind method is inherently unstable.
+  
+  \end{proof}
+
+\section*{Problem 5}
+
+\subsection*{(a)}
+
+\begin{thm} 
+Lax-Friedrichs method is stable in $L^2$ norm.
+\end{thm}
+
+\begin{proof}
+The symbol of Lax-Friedrichs finite difference operator is:
+
+ $$ L = \sum\limits_{s=-1}^{1} c_s S^s = \frac{1}{2} (S^{-1} + S^1) + \frac{\sigma}{2}(S^{-1} - S^1) \Longrightarrow $$ 
+
+ \begin{multline}
+  \lambda(\beta) = \frac{1}{2}(e^{i\beta} + e^{-i\beta} - \sigma(e^{i\beta} - e^{-i\beta})) = \cos\beta - i\sigma\sin\beta \Longrightarrow \\
+  \lvert \lambda(\beta) \rvert^2 = \cos^2\beta + \sigma^2\sin^2\beta = 1 - (1-\sigma^2)\sin^2\beta
+ \end{multline}
+ 
+ $$ \max_\beta ~\lvert \lambda(\beta) \rvert \le 1 \Longleftrightarrow \sigma \in [0,1]$$
+ 
+ Thus, by spectral stability criterion, Lax-Friedrichs method is stable in $L^2$ norm whenever $\sigma \in [0,1]$
+ 
+\end{proof}
+
+\subsection*{(b)}
+
+\begin{thm} 
+Lax-Friedrichs method is consistent.
+\end{thm}
+
+\begin{proof}
+
+The local truncation error is:
+
+ $$\tau^n_i = \frac{u^{n+1}_i - (Lu^n)_i}{\Delta t} = \frac{1}{\Delta t} (u^{n+1}_i - \frac{1+\sigma}{2} u^n_{i-1} - \frac{1-\sigma}{2} u^n_{i+1})  $$
+ 
+ It is convenient to represent the values of a function and its derivatives in operator form, as a vector in which the $n$-th component is $(n-1)$-th term of the Taylor series (i.e. as $k$-jets, where $k = 2$ in our case, i.e. up to the first derivative).
+ 
+ Thus,  $$ \frac{u^{n+1}_i}{\Delta t} = \begin{pmatrix} 1 + O(\Delta t) \\ \partial_{t} \end{pmatrix}, 
+ ~ \frac{u^n_{i-1}}{\Delta t} = \begin{pmatrix} 1 + O(h) \\ -\frac{a}{\sigma} ~\partial_{x}\end{pmatrix},
+ ~ \frac{u^n_{i+1}}{\Delta t} = \begin{pmatrix} 1 + O(h)\\ \frac{a}{\sigma} ~\partial_{x} \end{pmatrix} $$ 
+ 
+ and $$ \tau^n_i = \begin{pmatrix} 
+ 1 - (\frac{1+\sigma}{2} + \frac{1-\sigma}{2}) + O(\Delta t) 
+ \\ \partial_{t} + \frac{a(1+\sigma)}{2\sigma}\partial_{x}  - \frac{a(1-\sigma)}{2\sigma}\partial_{x} \end{pmatrix}  = \begin{pmatrix} O(\Delta t) \\ \partial_{t} + a \partial_{x} \end{pmatrix} = O(\Delta t)$$ 
+
+
+% 
+% The local truncation error is:
+% 
+%  \begin{multline} \tau^n_i = \frac{u^{n+1}_i - (Lu^n)_i}{\Delta t} = \frac{u^{n+1}_i - 0.5(u^n_{i-1}+u^n_{i+1}) - 0.5\sigma(u^n_{i-1}-u^n_{i+1})}{\Delta t} = \\ = \frac{1}{\Delta t} ( u^{n+1}_i - \frac{u^n_{i-1}+u^n_{i+1}}{2} ) + a \frac{u^n_{i+1}-u^n_{i-1}}{2h} \end{multline}
+% 
+%  Since $$ \frac{u^n_{i-1}+u^n_{i+1}}{2} = \frac{u^n_{i}+u^n_{i} + u_x(x_i, t_i)h -  u_x(x_i, t_i)h +O(h^2)}{2} = u^n_i + O(h^2)$$ and $$ \frac{u^n_{i+1}-u^n_{i-1}}{2h} = u_x(x_i, t_i) + O(h^2),~ \frac{O(h^2)}{\Delta t} = O(\Delta t) \Longrightarrow $$ 
+%  
+%   $$ \tau^n_i = \frac{u^{n+1}_{i} - u^n_i}{\Delta t} + au_x(x_i, t_i) + O(\Delta t) $$
+%   
+%  Since \begin{multline} \frac{u^{n+1}_{i} - u^n_i}{\Delta t} = u_t(x_i, t_i) + O(\Delta t) \Longrightarrow \\
+%    \tau^n_i = u_t(x_i, t_i) + au_x(x_i, t_i) + O(\Delta t)=  u_t(x_i, t_i) + au_x(x_i, t_i) + O(\Delta t) \end{multline}
+%   
+%   Since \begin{multline} u_t(x_i, t_i) + au_x(x_i, t_i) = 0 \Longrightarrow \\
+%    \tau^n_i = O(\Delta t) \longrightarrow 0 \end{multline}
+    
+  Due to triangle inequality for norms, \begin{multline} \norm{\tau^n} = \frac{\norm{u^{n+1} - (Lu^n)}}{\Delta t} \le \max_i \lvert \tau^n_i \rvert = O(\Delta t) \\   
+   \norm{\tau^n}  = O(\Delta t) \longrightarrow 0, ~t \longrightarrow 0 \end{multline}
+ 
+ Thus, Lax-Friedrichs method is consistent.
+ 
+\end{proof}
+
+\subsection*{(c)}
+
+\begin{thm} 
+Lax-Friedrichs method converges to the exact solution of the linear transport equation.
+\end{thm}
+
+\begin{proof}
+Convergence of a consistent stable linear finite difference method is essentially the consequence of triangle inequality property of norms, the definition of an operator norm which implies $ \norm{Lx} \le \norm{L}\norm{x}$, the fact that $\norm{L} \le 1 $ for stable Lax-Friedrichs operator, and, finally, linearity of the latter:
+
+ \begin{multline} 
+ \norm{u(t^n) - u^n} = \norm{u(t^n) - Lu^{n-1}} = \norm{u(t^n) - Lu(t^{n-1}) + Lu(t^{n-1})- Lu^{n-1}} \le \\
+ \le \norm{u(t^n) - Lu(t^{n-1})} + \norm{Lu(t^{n-1})- Lu^{n-1}} \le \\ \le \norm{u(t^n) - Lu(t^{n-1})} + \norm{L(u(t^{n-1})- u^{n-1})} \le \\
+ \le \norm{u(t^n) - Lu(t^{n-1})} + \norm{L}\norm{u(t^{n-1})- u^{n-1}} \le \\ \le \norm{u(t^n) - Lu(t^{n-1})} + \norm{u(t^{n-1})- u^{n-1}}
+ \end{multline}
+ 
+ Since Lax-Friedrichs is consistent and its truncation error is $O(\Delta t)$ \begin{multline} \norm{u(t^n) - Lu(t^{n-1})} = O(\Delta t^2) \Longrightarrow \\
+ \norm{u(t^n) - u^n} = O(\Delta t^2) + \norm{u(t^{n-1})- u^{n-1}} \end{multline} 
+ 
+ Since $ \norm{u(t^n) - u^n} $ is defined recursively through $\norm{u(t^{n-1})- u^{n-1}}$, by induction we find that 
+ 
+ $$ \norm{u(t^n) - u^n} = O(N\Delta t^2) + \norm{u(t^0) - u^0} = O(\Delta t)$$
+ 
+ Thus, consistency and stability imply \emph{first-order} convergence of Lax-Friedrichs method:
+ 
+ $$ \norm{u(t^n) - u^n} \longrightarrow 0, ~\Delta t \longrightarrow 0 $$
+ 
+\end{proof}
+
+
+% \bibliographystyle{amsplain}
+% \begin{thebibliography}{n} %% n is number of items, or the largest label
+% 
+% \bibitem{1}\label{some label - optional} A.\,U. Thor, (not Thor, A.U.!)
+% \emph{Title of paper},
+% J. Math. \textbf{99} (2008), 111--222.
+% 
+% \bibitem{2} A.\,U. Thor,
+% \emph{Title of paper},
+% in: E. Ditor (ed.), \emph{Title of Book}, Publisher, City, Year, 888--999.
+% 
+% \end{thebibliography}
+
+\end{document}
+
+%% To be filled in the journal office:
+
+@author:
+@affiliation:
+@title:
+@language: English
+@pages:
+@classification1:
+@classification2:
+@keywords:
+@abstract:
+@filename:
+@EOI
+
+

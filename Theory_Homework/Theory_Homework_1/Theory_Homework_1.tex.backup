@@ -1,0 +1,375 @@
+%% This is LaTeX template for preparing papers for Publ. Inst. Math.; version of 12.12.2013
+%% Please delete everything begining with %% (DOUBLE %).
+
+% Submission number: please insert
+\documentclass[a4paper,draft]{amsproc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd} %% Package for commutative diagrams
+%\usepackage[dvips]{graphicx} %% Package for inserting illustrations/figures
+
+%% The following packages are useful (you may want to use them):
+%\usepackage{refcheck} %% Checks whether enumerated equations are referred to or not.
+                       %% Please remove unnecessary numbers.
+%\usepackage{cmdtrack} %% Checks whether all author defined macros are used or not
+                       %% (see the end of .log file); unused ones should be removed.
+%% Both of the packages have some limitations---consult package documentations.
+
+\theoremstyle{plain}
+ \newtheorem{thm}{Theorem}[section]
+ \newtheorem{prop}{Proposition}[section]
+ \newtheorem{lem}{Lemma}[section]
+ \newtheorem{cor}{Corollary}[section]
+\theoremstyle{definition}
+ \newtheorem{exm}{Example}[section]
+ \newtheorem{dfn}{Definition}[section]
+\theoremstyle{remark}
+ \newtheorem{rem}{Remark}[section]
+ \numberwithin{equation}{section}
+
+%% Please, do not change the following four lines:
+\renewcommand{\le}{\leqslant}\renewcommand{\leq}{\leqslant}
+\renewcommand{\ge}{\geqslant}\renewcommand{\geq}{\geqslant}
+\renewcommand{\setminus}{\smallsetminus}
+\setlength{\textwidth}{28cc} \setlength{\textheight}{42cc}
+
+
+% \let\oldequation=\equation
+% \let\endoldequation=\endequation
+% \renewenvironment{equation}{\begin{oldequation}}{\end{oldequation}\vspace{1mm}}
+
+\providecommand{\norm}[1]{\lVert#1 \rVert}
+\providecommand{\R}{\begin{pmatrix} R \\ 0 \end{pmatrix}}
+\providecommand{\Q}{\begin{pmatrix} Q_1^{T} \\ Q_2^{T} \end{pmatrix}}
+\providecommand{\SVD}{\begin{pmatrix} \Sigma \\ 0 \end{pmatrix}}
+\providecommand{\SVDr}{\begin{pmatrix} \Sigma_1 & 0 \\ 0 & 0 \end{pmatrix}}
+\providecommand{\V}{\begin{pmatrix} V_1^{T} \\ V_2^{T} \end{pmatrix}}
+\providecommand{\U}{\begin{pmatrix} U_1  U_2 \end{pmatrix}}
+\providecommand{\Vr}{\begin{pmatrix} v_1^{T} \\ \vdots \\ v_r^{T} \end{pmatrix}}
+\providecommand{\Vn}{\begin{pmatrix} v_1^{T} \\ \vdots \\ v_n^{T} \end{pmatrix}}
+\providecommand{\Vni}{\begin{pmatrix} v_{1i} \dots v_{ni}\end{pmatrix}}
+\providecommand{\B}{\begin{pmatrix} b_1^{T} \\ \vdots \\ b_n^{T} \end{pmatrix}}
+
+\title[MAT 228A Theory Homework 1]{MAT 228A Theory Homework 1}
+
+% \subjclass[2010]{Primary REQUIRED; Secondary OPTIONAL}
+
+%% Please use the newest classification -- 2010
+%% available at  http://msc2010.org/MSC-2010-server.html
+%% and the newest amsproc.cls -- from 2009!!
+%% Please, classify to the third level,
+%% e.g., 26A and 26Axx are not satisfsctory.
+
+% \keywords{optional, but desirable}
+
+\author[Cherkashin]{\bfseries Ivan Cherkashin}
+
+% \address{
+% Department of Mathematics \\ % \hfill (Received 00 00 2010)\\
+% Our University   \\ %\hfill (Revised  00 00 2010)\\
+% Town\\
+% Country}
+% \email{user@server}
+
+%% OTHER AUTHOR(S):
+%\author[]{}
+%\address{ }
+%\email{}
+
+% \thanks{Partially supported by ... } %% optional
+
+% \dedicatory{Communicated by }
+%% We use this for communication information.
+%% If you want do dedicate your paper to somebody, then please use \thanks{}
+
+\begin{document}
+
+%{\begin{flushleft}\baselineskip9pt\scriptsize
+%PUBLICATIONS DE L'INSTITUT MATH\'EMATIQUE\newline
+%Nouvelle s\'erie, tome 91(105) (2012), od--do \hfill DOI:
+%\end{flushleft}}
+\vspace{18mm} \setcounter{page}{1} \thispagestyle{empty}
+
+
+% \begin{abstract}
+% An abstract is OBLIGATORY!
+% Please do not use author defined macros in the abstract
+% and avoid references to anything in the paper,
+% since the abstract will be detached from the article.
+% \end{abstract}
+
+\maketitle
+
+\section*{0.1.1}
+
+\begin{thm} \label{some label} % of course, label is optional
+\begin{equation} \left\lvert \frac{f(x_i)-f(x_{i-1})}{h}-f^{\prime}(x_i) \right\rvert \le Ch \end{equation} 
+where $C$ is independent of $h=x_i-x_{i-1}$, $f \in C^2[x_{i-1}, x_i]$ 
+\end{thm}
+
+\begin{proof}
+By Lagrange's theorem, the Taylor series of $f(x)$ about $x_{i-1}$ can be expressed in the following way:
+
+\begin{equation}\label{eq:1}
+f(x_{i-1}) = f(x_i - h) = f(x_i)-f^{\prime}(x_i)h+\frac{f^{\prime \prime}(\theta)}{2}h^2
+\end{equation}
+
+where $\theta \in [x_{i-1}, x_i]$. From (0.1) it follows that
+
+\begin{equation}\label{eq:a2b}
+\left\lvert \frac{f(x_i)-f(x_{i-1})}{h}-f^{\prime}(x_i) \right\rvert = \left\lvert \frac{f^{\prime \prime}(\theta)}{2} \right\rvert h
+\end{equation}
+
+from which the following estimate is true
+
+\begin{equation}\label{eq:a2b}
+\left\lvert \frac{f(x_i)-f(x_{i-1})}{h}-f^{\prime}(x_i) \right\rvert \le Ch
+\end{equation}
+ 
+where $ C = \underset{\theta \in [x_{i-1}, x_i]}{\sup} \left\lvert \frac{f^{\prime \prime}(\theta)}{2} \right\rvert = \underset{\theta \in [x_{i-1}, x_i]}{\max} \left\lvert \frac{f^{\prime \prime}(\theta)}{2} \right\rvert $.
+The supremum is necessarily attained, since $f^{\prime \prime}$ is a continuous function on a compact $[x_{i-1}, x_i]$.
+
+\end{proof}
+
+\section*{0.1.2}
+
+\begin{thm} \label{some label} % of course, label is optional
+\begin{multline} \frac{(f(x_{i+1})+E(x_{i+1})h^2)-(f(x_{i-1})+E(x_{i-1})h^2)}{2h} = \\ f^{\prime}(x_i)+O(h^2)+E^{\prime}(x_i)h^2+O(h^4) \end{multline} 
+where $ h=x_i-x_{i-1}=x_{i+1}-x_{i}, ~ f,E \in C^3[x_{i-1}, x_{i+1}]$ 
+\end{thm}
+
+\begin{proof}
+By Lagrange's theorem, the Taylor series of $F(x) \in C^3[x_{i-1}, x_{i+1}]$ about $x_{i}$ can be expressed in the following way:
+\begin{equation}\label{eq:1}
+F(x_{i+1})=F(x_i)+F^{\prime}(x_i)h+\frac{F^{\prime \prime}(x_{i})}{2}h^2+\frac{F^{\prime \prime \prime}(\theta_1)}{6}h^3
+\end{equation}
+
+\begin{equation}\label{eq:1}
+F(x_{i-1})=F(x_i)-F^{\prime}(x_i)h+\frac{F^{\prime \prime}(x_{i})}{2}h^2-\frac{F^{\prime \prime \prime}(\theta_2)}{6}h^3
+\end{equation}
+
+where $\theta_1, \theta_2 \in [x_{i-1}, x_i]$. Subtracting (0.5) from (0.4) and dividing by $2h$ results in 
+
+\begin{equation}\label{eq:1}
+\frac{F(x_{i+1})-F(x_{i-1})}{2h}=F^{\prime}(x_i)+\frac{F^{\prime \prime \prime}(\theta_1)+F^{\prime \prime \prime}(\theta_2)}{12}h^2
+\end{equation}
+
+Considering that $F(x) = f(x) + E(x)h^2$, (0.6) becomes 
+
+\begin{multline}
+\frac{(f(x_{i+1})+E(x_{i+1})h^2)-(f(x_{i-1})+E(x_{i-1})h^2)}{2h}= \\ 
+f^{\prime}(x_i)+E^{\prime}(x_i)h^2+\frac{f^{\prime \prime \prime}(\theta_1)+f^{\prime \prime \prime}(\theta_2)}{12}h^2+\frac{E^{\prime \prime \prime}(\theta_1)+E^{\prime \prime \prime}(\theta_2)}{12}h^4
+\end{multline}
+
+from which follows the estimate
+
+\begin{multline}
+\lvert \frac{(f(x_{i+1})+E(x_{i+1})h^2)-(f(x_{i-1})+E(x_{i-1})h^2)}{2h} - f^{\prime}(x_i)-E^{\prime}(x_i)h^2 \rvert \le \\ 
+C_1 h^2+C_2 h^4
+\end{multline}
+ 
+where $ C_1 = \underset{\theta \in [x_{i-1}, x_{i+1}]}{\sup} \lvert \frac{f^{\prime \prime \prime}(\theta)}{12} \rvert $, $ C_2 = \underset{\theta \in [x_{i-1}, x_{i+1}]}{\sup} \lvert \frac{E^{\prime \prime \prime}(\theta)}{12} \rvert $.
+
+The suprema are necessarily attained, since $f^{\prime \prime \prime}$, $E^{\prime \prime \prime}$ are continuous functions on a compact $[x_{i-1}, x_{i+1}]$.
+
+But the equation (0.10) is simply the definition of 
+
+ \begin{multline}
+\frac{(f(x_{i+1})+E(x_{i+1})h^2)-(f(x_{i-1})+E(x_{i-1})h^2)}{2h} = \\ 
+f^{\prime}(x_i)+E^{\prime}(x_i)h^2+O(h^2)+O(h^4)
+\end{multline}
+
+\end{proof}
+
+\section*{0.2.1}
+
+\begin{thm} \label{some label}
+$(\forall K \in \mathbb{R_+}) \wedge (\forall n \in \mathbb{N})$ \begin{equation} 1+K\Delta t \le e^{K\Delta t} \implies (1+K\Delta t)^n \le e^{Kt}\end{equation} \\ where $ t = n\Delta t$.  
+\end{thm}
+
+\begin{proof}
+
+Since $K\Delta t \ge 0$,
+
+\begin{equation} 1+K\Delta t \le 1+K\Delta t + \sum^{\infty}_{k = 2} \frac{(K\Delta t)^k}{k!} = \sum^{\infty}_{k = 0} \frac{(K\Delta t)^k}{k!}= e^{K\Delta t} \end{equation}
+
+i.e.
+
+\begin{equation} 1+K\Delta t \le e^{K\Delta t} \end{equation}
+
+and, hence,
+
+\begin{equation} (1+K\Delta t)^n \le e^{Kn\Delta t} = e^{Kt} \end{equation}
+
+Since $ t = n\Delta t$. 
+
+\end{proof}
+
+\section*{0.2.3}
+
+\begin{thm}
+ Heun's method 
+ 
+ \begin{center}
+ $ y^{n+1} = y^n + \frac{\tau}{2}[f(y^n) + f(y^n + \tau f(y^n))] $ 
+ \end{center} 
+ 
+ is a stable and consistent discretization of the initial value problem 
+ 
+ \begin{center}
+ $ y_t = f(y), ~ y(0) = y_0$ 
+ \end{center}
+ 
+ when $f \in C^2$
+ 
+\end{thm}
+
+\begin{proof}[Consistency]
+
+The truncation error is
+
+\begin{equation}
+ \frac{1}{\tau}[y(t^{n+1}) - y(t^{n}) - \frac{\tau}{2}[f(y(t^{n})) + f(y(t^{n}) + \tau f(y(t^{n})))]]
+\end{equation}
+
+Remark that, since $f \in C ^2 \implies y \in C^3$,
+
+\begin{equation}
+ y(t^{n+1}) = y(t^{n} + \tau) = y(t^{n}) + y_t(t^{n}) \tau + \frac{y_{tt}(t^n) \tau^2}{2} + O(\tau^3)
+\end{equation}
+
+and that
+
+\begin{equation}
+ f(y(t^{n}) + \tau f(y(t^{n}))) = f(y(t^{n})) + f_y(y(t^{n})) f(y(t^{n})) \tau + O(\tau^2)
+\end{equation}
+
+Relations (0.15) and (0.16) imply, after reordering of terms, that the truncation error is
+
+\begin{equation}
+ [y_t(t^{n}) - f(y(t^{n}))] + \frac{\tau}{2}[y_{tt}(t^n) - f_y(y(t^{n})) f(y(t^{n})) ] + O(\tau^2)
+\end{equation}
+
+However, it is true that
+
+\begin{equation}
+ y_t(t^{n}) - f(y(t^{n})) = 0
+\end{equation}
+
+which is the statement of the initial value problem, and that
+
+\begin{multline}
+ y_{tt}(t^{n}) = f_t(y(t^{n})) = f_y(y(t^{n})) y_t(t^{n}) = f_y(y(t^{n})) f(y(t^{n})) \\ \implies y_{tt}(t^n) - f_y(y(t^{n})) f(y(t^{n})) = 0
+\end{multline}
+
+Thus, from (0.18) and (0.19) it follows that the truncation error is of second order:
+
+\begin{equation}
+ O(\tau^2)
+\end{equation}
+
+and, therefore, Heun's method is consistent.
+
+\end{proof}
+
+\begin{proof}[Stability]
+
+Let
+  \begin{equation} 
+ F(y) = \frac{f(y)  + f(y + \tau f(y)}{2}
+ \end{equation}
+ 
+  Also, $f \in C^2 \implies F \in C^2$.
+ 
+ Since $\mathbb{R}$ is locally compact, any two states $y_1 < y_2 < \infty $ belong to some compact $K \subset \mathbb{R}$. If the solution is sought only for such time intervals during which the solution does not escape the compact $K$, then $F \in C^2(K) \implies F \in Lip(K)$, which means that
+ 
+  \begin{equation}
+ \forall y_1, y_2 \in K, ~ 
+ \lvert F(y_2)- F(y_1) \rvert \le C \lvert y_2 - y_1 \rvert
+ \end{equation}
+ 
+ where the Lipschitz constant $C = \underset{\theta \in K}{\sup} \lvert F_y(\theta) \rvert $, by Lagrange's theorem. The supremum is attained because $F_y$ is continuous on a compact. 
+ 
+ Now, consider how the approximation operator "repels" the two states:
+ 
+ \begin{multline}
+  \lvert L_{\tau}[y_2] - L_{\tau}[y_1] \rvert = \lvert (y_2 - y_1) + \tau(F(y_2)- F(y_1)) \rvert \le \lvert y_2 - y_1 \rvert + \tau \lvert F(y_2)- F(y_1) \rvert 
+  \\ \le (1 + \tau C) \lvert y_2 - y_1 \rvert
+ \end{multline}
+
+ But that is exactly the definition of stability. Thus, the notion of stability of an approximation operator is the same as the notion of compactness of an operator: an operator is called \emph{compact} if the image of a bounded set is a totally bounded set (i.e. the image of a bounded set is precompact). Since precompact sets are bounded, compact operators preserve boundedness of sets. But that is exactly how stability is understood: it is when a bounded region of uncertainty in input remains bounded after the approximation operator is applied. 
+ 
+\end{proof}
+
+\begin{proof}[Convergence]
+ 
+ Since Heun's method is stable and consistent when $f \in C^2$, by Theorem 0.2.2 it converges to the exact solution of the initial value problem stated in the theorem. By the same theorem, the convergence of Heun's method is of \emph{second order}, which is the same order as the order of the truncation error.
+ 
+\end{proof}
+
+
+
+\section*{1.1.1}
+
+\begin{thm} \label{some label}
+The centered difference method $u^{n+1}_i = u^{n}_i+\frac{\sigma}{2}(u^{n}_{i-1}-u^{n}_{i+1}) $ is unstable in the discrete max norm $\norm{\cdot}_{\infty}$  
+\end{thm}
+
+\begin{proof}
+
+The discrete max norm and the discrete $L^2$ norm are related thus:
+
+\begin{equation}
+ \norm{x}_{\infty} \le \norm{x}_{2} \le \sqrt{n}\norm{x}_{\infty}  
+\end{equation}
+
+where $x \in \mathbb{R}^n$. This relationship also means that the discrete max norm and the discrete $L^2$ norm induce the same topology on $\mathbb{R}^n$. In fact, in finite dimensional linear spaces, all norms induce the same topology. Thus, the stability of a finite difference scheme is a topological property. This make sense, because the spectrum of the approximation operator, which determines the stability of a finite difference scheme, is a topological invariant.
+
+Since the centered difference method is unstable in the $L^2$ norm, from (0.14) it follows that it is also unstable in the discrete max norm $\norm{\cdot}_{\infty}$.
+
+NOTE: is the centered difference scheme \emph{always} unstable? 
+
+Counter-example:
+
+\begin{equation} \underset{\phi \in S}{\max} \lvert \lambda(\phi) \rvert = \sqrt{1+\sigma^2} = \sqrt{1+(\frac{a\tau}{h})^2} \end{equation}
+
+If $\tau = Ah^2$, $A \in R_+$ while $\tau, h \rightarrow 0$, then
+
+\begin{equation} \underset{\phi \in S}{\max} \lvert \lambda(\phi) \rvert = \sqrt{1+(\frac{a\tau}{h})^2} = \sqrt{1+a^2A\tau} = 1 + \frac{a^2A\tau}{2} + O(\tau^2) \end{equation}
+
+\begin{equation} \underset{\phi \in S}{\max} \lvert \lambda(\phi) \rvert = 1 + \frac{a^2A\tau}{2} + O(\tau^2) \le e^{C\tau}\end{equation}
+
+where $C < \infty$ is a constant. Therefore, by spectral stability criterion, the centered difference scheme must be stable if $\tau = Ah^2$, $A \in R_+$ while $\tau, h \rightarrow 0$.
+                                                                                                                  
+\end{proof}
+
+% \bibliographystyle{amsplain}
+% \begin{thebibliography}{n} %% n is number of items, or the largest label
+% 
+% \bibitem{1}\label{some label - optional} A.\,U. Thor, (not Thor, A.U.!)
+% \emph{Title of paper},
+% J. Math. \textbf{99} (2008), 111--222.
+% 
+% \bibitem{2} A.\,U. Thor,
+% \emph{Title of paper},
+% in: E. Ditor (ed.), \emph{Title of Book}, Publisher, City, Year, 888--999.
+% 
+% \end{thebibliography}
+
+\end{document}
+
+%% To be filled in the journal office:
+
+@author:
+@affiliation:
+@title:
+@language: English
+@pages:
+@classification1:
+@classification2:
+@keywords:
+@abstract:
+@filename:
+@EOI
+
+
